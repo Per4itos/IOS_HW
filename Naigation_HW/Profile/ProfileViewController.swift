@@ -9,6 +9,18 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    
+    var user: User
+
+    init(user: User) {
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.dataSource = self
@@ -25,7 +37,7 @@ class ProfileViewController: UIViewController {
     var post2 = postSetup
     var post3 = headerSetup
 
-    private let profile = Profile1(name: "Hipster Cat", text: "Waiting for something...")
+//    private let profile = Profile1(name: "Hipster Cat", text: "Waiting for something...")
     
     
     override func viewDidLoad() {
@@ -105,7 +117,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             let header =  tableView.dequeueReusableHeaderFooterView(withIdentifier: "Header") as! ProfileHeaderView
-            header.setup(with: profile)
+            header.setup(with: user)
             return header
         } else {
             return nil

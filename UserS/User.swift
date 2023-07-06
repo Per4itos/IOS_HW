@@ -22,6 +22,4 @@ class User {
     }
 }
 
-let persone1 = User(logIn: "name123", name: "NAME", image: UIImage(named: "image13")!, status: "My status")
 
-let persone2 = User(logIn: "name321", name: "name", image: UIImage(named: "image10")!, status: "Test status")

@@ -7,7 +7,22 @@
 
 import UIKit
 
-class LogInViewController: UIViewController  {
+final class LogInViewController: UIViewController  {
+    
+    var loginInspectr: LoginInspector
+//    var loginFactory: LoginFactory
+    
+    init(loginInspectr: LoginInspector) {
+        
+        self.loginInspectr = loginInspectr
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var currentLogIn = CurrentUserService()
     var testLogIn = TestUserSercive()
@@ -48,7 +63,6 @@ class LogInViewController: UIViewController  {
     
     private lazy var logInTextField: UITextField = {
         let logInText = UITextField()
-        
         logInText.placeholder = "Email or phone"
         logInText.textColor = .black
         logInText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -63,7 +77,6 @@ class LogInViewController: UIViewController  {
     
     private lazy var passwordTextField: UITextField = {
         let passwordText = UITextField()
-        
         passwordText.placeholder = "Password"
         passwordText.textColor = .black
         passwordText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -96,6 +109,7 @@ class LogInViewController: UIViewController  {
         self.setUpViews()
         self.setupGesture()
         self.tabBarController?.tabBar.isHidden = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -196,26 +210,21 @@ class LogInViewController: UIViewController  {
     }
     
     @objc private func buttonAction2() {
-#if DEBUG
-        if currentLogIn.chekLog(login: logInTextField.text ?? " ") != nil {
-            let profileViewController = ProfileViewController()
+        
+        
+        if loginInspectr.check(log: logInTextField.text!, pass: passwordTextField.text!) == true {
+            let user = User(logIn: "adham", name: "adham", image: UIImage(named: "image3")!, status: "active")
+            
+            let profileViewController = ProfileViewController(user: user)
             
             self.navigationController?.pushViewController(profileViewController, animated: true)
+            
         }else {
-            logInTextField.text = "логин не найден"
+                                    print ("Не правильно введен логин или пароль")
+            
+                                let alert = UIAlertController(title: "Incorrect login", message: "Please, enter correct login", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+                                self.present(alert, animated: true)
         }
-#else
-        if testLogIn.chekLog(login: logInTextField.text ?? " ") != nil {
-            let profileViewController = ProfileViewController()
-            
-            self.navigationController?.pushViewController(profileViewController, animated: true)
-            
-        }else{
-            
-            logInTextField.text = "логин не найден"
-        }
-#endif
     }
 }
-
-

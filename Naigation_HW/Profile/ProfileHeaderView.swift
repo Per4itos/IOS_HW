@@ -95,10 +95,10 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         ])
     }
     
-    func setup(with profile: Profile1) {
-        self.textLable.text = profile.text
-        self.nameLable.text = profile.name
-        self.avatarImageView.image = profile.image
+    func setup(with user: User) {
+        self.textLable.text = user.status
+        self.nameLable.text = user.name
+        self.avatarImageView.image = user.image
     }
     
     @objc private func buttonAction() {

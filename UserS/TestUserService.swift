@@ -8,15 +8,11 @@
 import UIKit
 
 class TestUserSercive: UserService {
-    
-    var user: User?
-    
     func chekLog(login: String) -> User? {
-        if login == persone2.logIn {
-            return persone2
-        }else{
-            return user
-        }
+        login == user.logIn ? user: nil
     }
-}
+    
+    let user = User(logIn: "userTest", name: "nameTest", image: UIImage(named: "image12")!, status: "statusTest")
+    }
+
 
