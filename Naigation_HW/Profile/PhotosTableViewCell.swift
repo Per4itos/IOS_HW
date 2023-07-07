@@ -9,16 +9,8 @@ import UIKit
 import StorageService
 
 
- public class PhotosTableViewCell: UITableViewCell {
+public class PhotosTableViewCell: UITableViewCell {
     
-//    struct ViewPhoto {
-//        let lable: String = "Photo"
-//        let image1: UIImage? = UIImage(named: "image0")
-//        let image2: UIImage? = UIImage(named: "image1")
-//        let image3: UIImage? = UIImage(named: "image2")
-//        let image4: UIImage? = UIImage(named: "image3")
-//        
-//    }
     
     private lazy var lableName: UILabel = {
         let lable = UILabel()
@@ -43,7 +35,7 @@ import StorageService
         photo.clipsToBounds = true
         photo.layer.cornerRadius = 6
         photo.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return photo
     }()
     
@@ -63,7 +55,7 @@ import StorageService
         photo.layer.cornerRadius = 6
         photo.backgroundColor = .black
         photo.translatesAutoresizingMaskIntoConstraints = false
-
+        
         
         return photo
     }()
@@ -87,8 +79,8 @@ import StorageService
         fatalError("init(coder:) has not been implemented")
     }
     
-      func setup(with postHeader: PostHeader) {
-         self.photoImage.image = postHeader.image1
+    func setup(with postHeader: PostHeader) {
+        self.photoImage.image = postHeader.image1
         self.photoImage2.image = postHeader.image2
         self.photoImage3.image = postHeader.image3
         self.photoImage4.image = postHeader.image4

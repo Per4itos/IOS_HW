@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import iOSIntPackage
 
 final class Photos {
     
     static let shared = Photos()
     
-    let examples: [UIImage]
+    let photo: [UIImage]
     
     private init() {
         var photos = [UIImage]()
-        for i in 1...20 { photos.append((UIImage(named: "image\(i)") ?? UIImage())) }
-        examples = photos.shuffled()
+        for i in 0...19 { photos.append((UIImage(named: "image\(i)") ?? UIImage())) }
+        photo = photos
     }
 }
+

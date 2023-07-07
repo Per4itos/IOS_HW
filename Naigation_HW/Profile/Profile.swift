@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 struct Profile1 {
     let name: String
     let text: String
@@ -16,4 +15,4 @@ struct Profile1 {
 
 
 
-   
+

@@ -6,11 +6,29 @@
 //
 
 import UIKit
+import iOSIntPackage
 
-class PhotosViewController: UIViewController {
+
+class PhotosViewController: UIViewController, ImageLibrarySubscriber {
+    
+    private lazy var facade = ImagePublisherFacade()
+    
+    private lazy var arayOfImagesForObserver = [UIImage]()
+    
+    private var arayOfImages = [UIImage]()
     
     private enum Constants {
+        
         static let numberOfItemsInLine: CGFloat = 3
+        
+    }
+    
+    private func setupArray() {
+        
+        Photos.shared.photo.forEach { photo in
+            self.arayOfImagesForObserver.append(photo)
+        }
+        facade.addImagesWithTimer(time: 0.5, repeat: 20, userImages: arayOfImagesForObserver)
     }
     
     private lazy var layout: UICollectionViewFlowLayout = {
@@ -31,17 +49,27 @@ class PhotosViewController: UIViewController {
         return collectionView
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
         self.navigationItem.title = "Photo Gallery"
+        self.setupArray()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         self.collectionView.collectionViewLayout.invalidateLayout()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        facade.removeSubscription(for: self)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        facade.subscribe(self)
+    }
+    
     
     private func setupView() {
         self.view.backgroundColor = .systemBackground
@@ -59,15 +87,16 @@ class PhotosViewController: UIViewController {
 extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Photos.shared.examples.count
+        return arayOfImages.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCollectionViewCell
         cell.backgroundColor = .gray
         cell.clipsToBounds = true
-        cell.prhotoConfige(photo: Photos.shared.examples[indexPath.item])
+        cell.prhotoConfige(photo: Photos.shared.photo[indexPath.item])
         
         return cell
     }
@@ -80,9 +109,14 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
         let width = collectionView.frame.width - (Constants.numberOfItemsInLine - 1) * interItemSpacing - insets.left - insets.right
         let itemWidth = floor(width / Constants.numberOfItemsInLine)
         
-        
-        
         return CGSize(width: itemWidth, height: itemWidth)
     }
 }
 
+extension PhotosViewController {
+    
+    func receive(images: [UIImage]) {
+        self.arayOfImages = images
+        collectionView.reloadData()
+    }
+}

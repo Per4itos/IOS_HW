@@ -10,7 +10,7 @@ import UIKit
 final class LogInViewController: UIViewController  {
     
     var loginInspectr: LoginInspector
-//    var loginFactory: LoginFactory
+    //    var loginFactory: LoginFactory
     
     init(loginInspectr: LoginInspector) {
         
@@ -63,6 +63,7 @@ final class LogInViewController: UIViewController  {
     
     private lazy var logInTextField: UITextField = {
         let logInText = UITextField()
+        logInText.text = Checker.shared.login
         logInText.placeholder = "Email or phone"
         logInText.textColor = .black
         logInText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -77,6 +78,7 @@ final class LogInViewController: UIViewController  {
     
     private lazy var passwordTextField: UITextField = {
         let passwordText = UITextField()
+        passwordText.text = Checker.shared.password
         passwordText.placeholder = "Password"
         passwordText.textColor = .black
         passwordText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -220,11 +222,11 @@ final class LogInViewController: UIViewController  {
             self.navigationController?.pushViewController(profileViewController, animated: true)
             
         }else {
-                                    print ("Не правильно введен логин или пароль")
+            print ("Не правильно введен логин или пароль")
             
-                                let alert = UIAlertController(title: "Incorrect login", message: "Please, enter correct login", preferredStyle: .alert)
-                                alert.addAction(UIAlertAction(title: "Close", style: .cancel))
-                                self.present(alert, animated: true)
+            let alert = UIAlertController(title: "Incorrect login", message: "Please, enter correct login", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+            self.present(alert, animated: true)
         }
     }
 }

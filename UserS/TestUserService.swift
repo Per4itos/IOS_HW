@@ -13,6 +13,6 @@ class TestUserSercive: UserService {
     }
     
     let user = User(logIn: "userTest", name: "nameTest", image: UIImage(named: "image12")!, status: "statusTest")
-    }
+}
 
 

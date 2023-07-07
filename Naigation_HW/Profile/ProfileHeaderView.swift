@@ -52,8 +52,8 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         return button
     }()
     
-
-
+    
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width / 2
@@ -91,7 +91,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
             
             textLable.bottomAnchor.constraint(equalTo: self.statusButton.topAnchor, constant: -34),
             textLable.leftAnchor.constraint(equalTo: self.avatarImageView.rightAnchor),
-
+            
         ])
     }
     

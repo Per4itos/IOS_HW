@@ -76,8 +76,8 @@ public class PostTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-   public func setup(with post: Post) {
-       self.titleLable.text = post.author
+    public func setup(with post: Post) {
+        self.titleLable.text = post.author
         self.text.text = post.description
         self.someImage.image = post.imageView
         self.likes.text = post.likes

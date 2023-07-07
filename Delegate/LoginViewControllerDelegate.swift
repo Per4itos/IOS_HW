@@ -9,7 +9,6 @@ import UIKit
 
 protocol LoginViewControllerDelegate {
     
-    
     func check(log: String, pass: String) -> Bool 
     
 }

@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarController.viewControllers = [
             feedViewController,
             logInViewController]
-        
+       
         tabBarController.viewControllers?.enumerated().forEach {
             $1.tabBarItem.title = $0 == 0 ? "Feed" : "Profile"
             $1.tabBarItem.image = $0 == 0

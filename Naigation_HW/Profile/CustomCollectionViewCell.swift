@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import iOSIntPackage
 
- class CustomCollectionViewCell: UICollectionViewCell {
 
+class CustomCollectionViewCell: UICollectionViewCell {
+    
     var photos = [UIImage]()
+    
+    let imageFacade = ImagePublisherFacade()
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -32,9 +36,14 @@ import UIKit
         self.imageView.image = photo
     }
     
+    func setupCell(for imageName:String, or indexPath: IndexPath, arrayOfImages: [UIImage]) {
+        let arrayOfFinishedImages: [UIImage] = PhotoCollectionFilter().createArrayOfImages(arrayOf: arrayOfImages)
+        imageView.image = arrayOfFinishedImages[indexPath.row]
+    }
+    
     private func setupView() {
         self.contentView.addSubview(self.imageView)
-       
+        
         NSLayoutConstraint.activate([
             self.imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             self.imageView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor),
