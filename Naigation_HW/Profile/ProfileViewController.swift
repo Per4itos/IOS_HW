@@ -37,9 +37,6 @@ class ProfileViewController: UIViewController {
     var post2 = postSetup
     var post3 = headerSetup
     
-    //    private let profile = Profile1(name: "Hipster Cat", text: "Waiting for something...")
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Profile"
@@ -54,8 +51,6 @@ class ProfileViewController: UIViewController {
         self.view.backgroundColor = .red
         
 #endif
-        
-        
     }
     
     private func setupHeader() {
@@ -129,10 +124,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         }else{
             return 0
         }
-        
     }
-    
-    
 }
 
 

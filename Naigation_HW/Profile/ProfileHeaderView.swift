@@ -35,23 +35,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         
         return lable2
     }()
-    private lazy var statusButton: UIButton = {
-        
-        let button = UIButton()
-        button.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
-        button.backgroundColor = .systemBlue
-        button.setTitleColor(.white, for: .normal)
-        button.setTitle("Show status", for: UIControl.State.normal)
-        button.layer.cornerRadius = 4
-        button.layer.shadowOffset = CGSize(width: 4, height: 4)
-        button.layer.shadowOpacity = 0.7
-        button.layer.shadowRadius = 4
-        button.layer.masksToBounds = false
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
-    
+    private lazy var statusButton =  CustonButton(title: "Show Status", titleColor: .white, buttonColor: .systemBlue, buttonCornRadius: 4, shadow: true, tapAction: buttonAction)
     
     
     override func layoutSubviews() {
@@ -91,7 +75,6 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
             
             textLable.bottomAnchor.constraint(equalTo: self.statusButton.topAnchor, constant: -34),
             textLable.leftAnchor.constraint(equalTo: self.avatarImageView.rightAnchor),
-            
         ])
     }
     

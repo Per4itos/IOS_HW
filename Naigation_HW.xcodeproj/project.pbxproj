@@ -41,6 +41,8 @@
 		E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399DB2A55BBDE00280019 /* LoginInspector.swift */; };
 		E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E75342C12A570441007148F0 /* iOSIntPackage */; };
 		E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */; };
+		E79D8A352A5C05FE000003DD /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustonButton.swift */; };
+		E79D8A372A5C140A000003DD /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedModel.swift */; };
 		E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */; };
 		E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */; };
 /* End PBXBuildFile section */
@@ -120,6 +122,8 @@
 		E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E74399DB2A55BBDE00280019 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
+		E79D8A342A5C05FE000003DD /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
+		E79D8A362A5C140A000003DD /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +170,6 @@
 				E74399D42A559BE100280019 /* Checker Singlton */,
 				E74399D82A559D0400280019 /* Delegate */,
 				E7CEB4D52A56D9A5000D5410 /* LoginFactory */,
-				E74399D52A559BFC00280019 /* Factory */,
 				E73DD4D32A53E96D0015ED0B /* StorageService */,
 				BC683E3328C36540002DD0FE /* Products */,
 			);
@@ -191,11 +194,12 @@
 				BC683E4028C36542002DD0FE /* LaunchScreen.storyboard */,
 				BC683E3528C36540002DD0FE /* AppDelegate.swift */,
 				BC683E3728C36540002DD0FE /* SceneDelegate.swift */,
-				BC683E6528C366D9002DD0FE /* FeedViewController.swift */,
 				BC683E6928C36768002DD0FE /* PostViewController.swift */,
 				BC683E6B28C36776002DD0FE /* PostBarController.swift */,
 				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
 				E708F0DF2A5324F8009F42CA /* Library */,
+				E79D8A332A5C05DD000003DD /* Feeds */,
+				E79D8A322A5C05BA000003DD /* Customs */,
 				BC683E7028C368B6002DD0FE /* Profile */,
 			);
 			path = Naigation_HW;
@@ -258,13 +262,6 @@
 			path = UserS;
 			sourceTree = "<group>";
 		};
-		E74399D52A559BFC00280019 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
 		E74399D82A559D0400280019 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +269,24 @@
 				E74399DB2A55BBDE00280019 /* LoginInspector.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		E79D8A322A5C05BA000003DD /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				E79D8A342A5C05FE000003DD /* CustonButton.swift */,
+			);
+			name = Customs;
+			path = Library;
+			sourceTree = "<group>";
+		};
+		E79D8A332A5C05DD000003DD /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				E79D8A362A5C140A000003DD /* FeedModel.swift */,
+				BC683E6528C366D9002DD0FE /* FeedViewController.swift */,
+			);
+			path = Feeds;
 			sourceTree = "<group>";
 		};
 		E7CEB4D52A56D9A5000D5410 /* LoginFactory */ = {
@@ -465,8 +480,10 @@
 				E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */,
 				BC683E6A28C36769002DD0FE /* PostViewController.swift in Sources */,
 				E708F0E22A5325C1009F42CA /* PostCollection.swift in Sources */,
+				E79D8A352A5C05FE000003DD /* CustonButton.swift in Sources */,
 				E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */,
 				BCAAA1812902FE470026605C /* CustomCollectionViewCell.swift in Sources */,
+				E79D8A372A5C140A000003DD /* FeedModel.swift in Sources */,
 				BC683E7428C36A75002DD0FE /* Profile.swift in Sources */,
 				BC87040828DF19EF00DFC66C /* PostTableViewCell.swift in Sources */,
 				E74399CF2A55705800280019 /* CurrentUserService.swift in Sources */,

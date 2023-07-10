@@ -10,7 +10,6 @@ import UIKit
 final class LogInViewController: UIViewController  {
     
     var loginInspectr: LoginInspector
-    //    var loginFactory: LoginFactory
     
     init(loginInspectr: LoginInspector) {
         
@@ -92,7 +91,7 @@ final class LogInViewController: UIViewController  {
         return passwordText
     }()
     
-    private lazy var logInButton: UIButton = {
+    private lazy var logInButton : UIButton = {
         let logInButton = UIButton()
         
         logInButton.layer.cornerRadius = 10
@@ -110,7 +109,7 @@ final class LogInViewController: UIViewController  {
         super.viewDidLoad()
         self.setUpViews()
         self.setupGesture()
-        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         
     }
     
@@ -135,14 +134,11 @@ final class LogInViewController: UIViewController  {
     private func setUpViews() {
         view.backgroundColor = .systemBackground
         self.view.addSubview(self.scroleView)
-        
         self.scroleView.addSubview(self.textStackView)
         self.scroleView.addSubview(self.logInButton)
         self.scroleView.addSubview(self.imageView)
-        
         self.textStackView.addSubview(self.logInTextField)
         self.textStackView.addSubview(self.passwordTextField)
-        
         
         NSLayoutConstraint.activate([
             
@@ -213,13 +209,43 @@ final class LogInViewController: UIViewController  {
     
     @objc private func buttonAction2() {
         
-        
         if loginInspectr.check(log: logInTextField.text!, pass: passwordTextField.text!) == true {
             let user = User(logIn: "adham", name: "adham", image: UIImage(named: "image3")!, status: "active")
             
-            let profileViewController = ProfileViewController(user: user)
+            let tabBarController = UITabBarController()
             
-            self.navigationController?.pushViewController(profileViewController, animated: true)
+            let feedViewController = UINavigationController(rootViewController: FeedViewController(loginInspectr: loginInspectr))
+            let profaileViewControler = UINavigationController(rootViewController: ProfileViewController(user: user))
+            
+            tabBarController.viewControllers = [
+                profaileViewControler,
+                feedViewController
+            ]
+            
+            tabBarController.viewControllers?.enumerated().forEach {
+                $1.tabBarItem.title = $0 == 0 ? "Profile" : "Feed"
+                $1.tabBarItem.image = $0 == 0
+                ? UIImage(systemName: "person.icloud")
+                : UIImage(systemName: "text.justify")
+            }
+            
+            let keyWindow = UIApplication
+                .shared
+                .connectedScenes
+                .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                .last { $0.isKeyWindow }
+            
+            guard let window = keyWindow else {
+                return
+            }
+            
+            window.rootViewController = tabBarController
+            
+            UIView.transition(with: window,
+                              duration: 0.3,
+                              options: .transitionCrossDissolve,
+                              animations: nil,
+                              completion: nil)
             
         }else {
             print ("Не правильно введен логин или пароль")

@@ -9,10 +9,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    
-    let feedViewController = UINavigationController(rootViewController: FeedViewController())
-//    let logInViewController = UINavigationController(rootViewController: LogInViewController(loginInspectr: LoginInspector()))
-    
+   
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -21,30 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let factory = MyLoginFactoryStruct()
         let loginInsectr = factory.makeLoginInspector()
-        
-        
         let logInViewController = UINavigationController(rootViewController: LogInViewController(loginInspectr: loginInsectr))
         
-        let tabBarController = UITabBarController()
-        
-        tabBarController.viewControllers = [
-            feedViewController,
-            logInViewController]
-       
-        tabBarController.viewControllers?.enumerated().forEach {
-            $1.tabBarItem.title = $0 == 0 ? "Feed" : "Profile"
-            $1.tabBarItem.image = $0 == 0
-            ? UIImage(systemName: "text.justify")
-            : UIImage(systemName: "person.icloud")
-            
-        
-        }
-        
-        self.window?.rootViewController = tabBarController
+        self.window?.rootViewController = logInViewController
         self.window?.makeKeyAndVisible()
-        
-     
-       
         
     }
     
