@@ -35,8 +35,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
         
         return lable2
     }()
-    private lazy var statusButton =  CustonButton(title: "Show Status", titleColor: .white, buttonColor: .systemBlue, buttonCornRadius: 4, shadow: true, tapAction: buttonAction)
-    
+    private lazy var statusButton = CustomButton(title: "Show Status", titleColor: .white, buttonColor: .systemBlue, buttonCornRadius: 4, shadow: true, tapAction: buttonAction)
     
     override func layoutSubviews() {
         super.layoutSubviews()

@@ -9,6 +9,8 @@ import UIKit
 
 class FeedViewController: UIViewController {
     
+    var feedViewModel = FeedViewModel(feedModel: .init())
+    
     var loginInspectr: LoginInspector
     
     init(loginInspectr: LoginInspector) {
@@ -30,7 +32,7 @@ class FeedViewController: UIViewController {
     }()
     
     
-    private lazy var checkGuessButton = CustonButton(title: "checkGuessButton", titleColor: .white, buttonColor: .blue, buttonCornRadius: 4, shadow: false, tapAction: checkGuessButtonAction)
+    private lazy var checkGuessButton = CustomButton(title: "checkGuessButton", titleColor: .white, buttonColor: .blue, buttonCornRadius: 4, shadow: false, tapAction: checkGuessButtonAction)
     
     private lazy var  checkGuessTextField: UITextField = {
         let checkGuessTextField = UITextField()
@@ -41,7 +43,7 @@ class FeedViewController: UIViewController {
         return checkGuessTextField
     }()
     
-    private lazy var button = CustonButton(title: "Go IN", titleColor: .white, buttonColor: .blue, buttonCornRadius: 4, shadow: false, tapAction: buttonAction)
+    private lazy var button = CustomButton(title: "Go IN", titleColor: .white, buttonColor: .blue, buttonCornRadius: 4, shadow: false, tapAction: buttonAction)
     
     
     override func viewDidLoad() {
@@ -87,9 +89,7 @@ class FeedViewController: UIViewController {
     
     @objc private func checkGuessButtonAction() {
         
-        let check = FeedModel()
-        
-        if check.chec(word: checkGuessTextField.text!) == true{
+        if feedViewModel.check(word: checkGuessTextField.text!) == true {
             self.checkGuessLable.backgroundColor = .green
         }else {
             self.checkGuessLable.backgroundColor = .red

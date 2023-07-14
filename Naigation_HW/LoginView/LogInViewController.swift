@@ -40,6 +40,7 @@ final class LogInViewController: UIViewController  {
     
     private lazy var imageView: UIImageView = {
         let image = UIImageView()
+        
         image.contentMode = .scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = imageVk
@@ -49,7 +50,7 @@ final class LogInViewController: UIViewController  {
     
     private lazy var textStackView: UIStackView = {
         let textStackView = UIStackView()
-        
+    
         textStackView.distribution = .fillEqually
         textStackView.axis = .vertical
         textStackView.layer.borderColor = UIColor.lightGray.cgColor
@@ -62,6 +63,7 @@ final class LogInViewController: UIViewController  {
     
     private lazy var logInTextField: UITextField = {
         let logInText = UITextField()
+        
         logInText.text = Checker.shared.login
         logInText.placeholder = "Email or phone"
         logInText.textColor = .black
@@ -77,6 +79,7 @@ final class LogInViewController: UIViewController  {
     
     private lazy var passwordTextField: UITextField = {
         let passwordText = UITextField()
+        
         passwordText.text = Checker.shared.password
         passwordText.placeholder = "Password"
         passwordText.textColor = .black

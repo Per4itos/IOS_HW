@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustonButton: UIButton {
+class CustomButton: UIButton {
     
     typealias Action = () -> Void
     

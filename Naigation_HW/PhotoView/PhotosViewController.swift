@@ -42,7 +42,7 @@ class PhotosViewController: UIViewController, ImageLibrarySubscriber {
     
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
-        collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "CustomCell")
+        collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: "CustomCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -93,7 +93,7 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! PhotoCollectionViewCell
         cell.backgroundColor = .gray
         cell.clipsToBounds = true
         cell.prhotoConfige(photo: Photos.shared.photo[indexPath.item])

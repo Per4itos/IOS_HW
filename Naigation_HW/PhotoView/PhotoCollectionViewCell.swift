@@ -9,7 +9,7 @@ import UIKit
 import iOSIntPackage
 
 
-class CustomCollectionViewCell: UICollectionViewCell {
+class PhotoCollectionViewCell: UICollectionViewCell {
     
     var photos = [UIImage]()
     

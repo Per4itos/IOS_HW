@@ -20,7 +20,7 @@
 		BC683E7428C36A75002DD0FE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC683E7328C36A75002DD0FE /* Profile.swift */; };
 		BC87040828DF19EF00DFC66C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC87040728DF19EE00DFC66C /* PostTableViewCell.swift */; };
 		BCA6373228C9F23400C65D52 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6373128C9F23400C65D52 /* LogInViewController.swift */; };
-		BCAAA1812902FE470026605C /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA1802902FE470026605C /* CustomCollectionViewCell.swift */; };
+		BCAAA1812902FE470026605C /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA1802902FE470026605C /* PhotoCollectionViewCell.swift */; };
 		BCB07C472901995300C6D752 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB07C462901995300C6D752 /* PhotosTableViewCell.swift */; };
 		BCB07C4929019CC000C6D752 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB07C4829019CC000C6D752 /* PhotosViewController.swift */; };
 		E708F0E22A5325C1009F42CA /* PostCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E708F0E12A5325C1009F42CA /* PostCollection.swift */; };
@@ -41,8 +41,9 @@
 		E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399DB2A55BBDE00280019 /* LoginInspector.swift */; };
 		E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E75342C12A570441007148F0 /* iOSIntPackage */; };
 		E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */; };
-		E79D8A352A5C05FE000003DD /* CustonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustonButton.swift */; };
-		E79D8A372A5C140A000003DD /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedModel.swift */; };
+		E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustomButton.swift */; };
+		E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedViewModel.swift */; };
+		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
 		E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */; };
 		E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */; };
 /* End PBXBuildFile section */
@@ -103,7 +104,7 @@
 		BC683E7328C36A75002DD0FE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BC87040728DF19EE00DFC66C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		BCA6373128C9F23400C65D52 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		BCAAA1802902FE470026605C /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCAAA1802902FE470026605C /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCB07C462901995300C6D752 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		BCB07C4829019CC000C6D752 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		BCDFB08428DDE3DB00D283B8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -122,8 +123,9 @@
 		E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E74399DB2A55BBDE00280019 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
-		E79D8A342A5C05FE000003DD /* CustonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonButton.swift; sourceTree = "<group>"; };
-		E79D8A362A5C140A000003DD /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		E79D8A342A5C05FE000003DD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E79D8A362A5C140A000003DD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		E7B46C6A2A6162890092A709 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				BC683E3428C36540002DD0FE /* Naigation_HW */,
-				E74399CB2A556BC800280019 /* UserS */,
+				E74399CB2A556BC800280019 /* Users */,
 				E74399D42A559BE100280019 /* Checker Singlton */,
 				E74399D82A559D0400280019 /* Delegate */,
 				E7CEB4D52A56D9A5000D5410 /* LoginFactory */,
@@ -198,7 +200,9 @@
 				BC683E6B28C36776002DD0FE /* PostBarController.swift */,
 				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
 				E708F0DF2A5324F8009F42CA /* Library */,
-				E79D8A332A5C05DD000003DD /* Feeds */,
+				E79D8A332A5C05DD000003DD /* FeedView */,
+				E7A7919A2A60016400D56CEB /* PhotoView */,
+				E7A7919B2A60017700D56CEB /* LoginView */,
 				E79D8A322A5C05BA000003DD /* Customs */,
 				BC683E7028C368B6002DD0FE /* Profile */,
 			);
@@ -208,13 +212,9 @@
 		BC683E7028C368B6002DD0FE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				BCA6373128C9F23400C65D52 /* LogInViewController.swift */,
 				BC683E6728C366EC002DD0FE /* ProfileViewController.swift */,
-				BCB07C4829019CC000C6D752 /* PhotosViewController.swift */,
 				BC683E7128C369AF002DD0FE /* ProfileHeaderView.swift */,
 				BC87040728DF19EE00DFC66C /* PostTableViewCell.swift */,
-				BCB07C462901995300C6D752 /* PhotosTableViewCell.swift */,
-				BCAAA1802902FE470026605C /* CustomCollectionViewCell.swift */,
 				BC683E7328C36A75002DD0FE /* Profile.swift */,
 			);
 			path = Profile;
@@ -223,8 +223,6 @@
 		E708F0DF2A5324F8009F42CA /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				E708F0E32A5325CA009F42CA /* PhotosCollection.swift */,
-				E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */,
 				E708F0E12A5325C1009F42CA /* PostCollection.swift */,
 				E708F0E52A5325E0009F42CA /* PostHeader.swift */,
 				E73DD4E62A53EDD70015ED0B /* PostHEaderCollection.swift */,
@@ -242,7 +240,7 @@
 			path = StorageService;
 			sourceTree = "<group>";
 		};
-		E74399CB2A556BC800280019 /* UserS */ = {
+		E74399CB2A556BC800280019 /* Users */ = {
 			isa = PBXGroup;
 			children = (
 				E74399CE2A55705800280019 /* CurrentUserService.swift */,
@@ -250,7 +248,7 @@
 				E74399CC2A556BE200280019 /* User.swift */,
 				E74399D22A55706D00280019 /* UserServiceProtocol.swift */,
 			);
-			path = UserS;
+			path = Users;
 			sourceTree = "<group>";
 		};
 		E74399D42A559BE100280019 /* Checker Singlton */ = {
@@ -274,19 +272,40 @@
 		E79D8A322A5C05BA000003DD /* Customs */ = {
 			isa = PBXGroup;
 			children = (
-				E79D8A342A5C05FE000003DD /* CustonButton.swift */,
+				E79D8A342A5C05FE000003DD /* CustomButton.swift */,
 			);
 			name = Customs;
 			path = Library;
 			sourceTree = "<group>";
 		};
-		E79D8A332A5C05DD000003DD /* Feeds */ = {
+		E79D8A332A5C05DD000003DD /* FeedView */ = {
 			isa = PBXGroup;
 			children = (
-				E79D8A362A5C140A000003DD /* FeedModel.swift */,
+				E7B46C6A2A6162890092A709 /* FeedModel.swift */,
+				E79D8A362A5C140A000003DD /* FeedViewModel.swift */,
 				BC683E6528C366D9002DD0FE /* FeedViewController.swift */,
 			);
-			path = Feeds;
+			path = FeedView;
+			sourceTree = "<group>";
+		};
+		E7A7919A2A60016400D56CEB /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				BCB07C4829019CC000C6D752 /* PhotosViewController.swift */,
+				BCB07C462901995300C6D752 /* PhotosTableViewCell.swift */,
+				BCAAA1802902FE470026605C /* PhotoCollectionViewCell.swift */,
+				E708F0E32A5325CA009F42CA /* PhotosCollection.swift */,
+				E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */,
+			);
+			path = PhotoView;
+			sourceTree = "<group>";
+		};
+		E7A7919B2A60017700D56CEB /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				BCA6373128C9F23400C65D52 /* LogInViewController.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		E7CEB4D52A56D9A5000D5410 /* LoginFactory */ = {
@@ -480,10 +499,11 @@
 				E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */,
 				BC683E6A28C36769002DD0FE /* PostViewController.swift in Sources */,
 				E708F0E22A5325C1009F42CA /* PostCollection.swift in Sources */,
-				E79D8A352A5C05FE000003DD /* CustonButton.swift in Sources */,
+				E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */,
 				E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */,
-				BCAAA1812902FE470026605C /* CustomCollectionViewCell.swift in Sources */,
-				E79D8A372A5C140A000003DD /* FeedModel.swift in Sources */,
+				E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */,
+				BCAAA1812902FE470026605C /* PhotoCollectionViewCell.swift in Sources */,
+				E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */,
 				BC683E7428C36A75002DD0FE /* Profile.swift in Sources */,
 				BC87040828DF19EF00DFC66C /* PostTableViewCell.swift in Sources */,
 				E74399CF2A55705800280019 /* CurrentUserService.swift in Sources */,

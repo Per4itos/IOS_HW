@@ -11,7 +11,6 @@ import StorageService
 
 public class PhotosTableViewCell: UITableViewCell {
     
-    
     private lazy var lableName: UILabel = {
         let lable = UILabel()
         lable.translatesAutoresizingMaskIntoConstraints = false
@@ -96,9 +95,8 @@ public class PhotosTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.tupButton)
         self.contentView.addSubview(self.lableName)
         
-        
         NSLayoutConstraint.activate([
-            //
+            
             self.lableName.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 12),
             self.lableName.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 12),
             
@@ -129,8 +127,5 @@ public class PhotosTableViewCell: UITableViewCell {
             self.photoImage4.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 44),
             
         ])
-        
     }
-    
-    
 }
