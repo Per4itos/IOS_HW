@@ -13,6 +13,8 @@ class FeedViewController: UIViewController {
     
     var loginInspectr: LoginInspector
     
+    private var feedSecretWord = [FeedModelStruct]()
+    
     init(loginInspectr: LoginInspector) {
         
         self.loginInspectr = loginInspectr
@@ -23,7 +25,7 @@ class FeedViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     private lazy var checkGuessLable: UILabel = {
         let checkGuessLable = UILabel()
         checkGuessLable.translatesAutoresizingMaskIntoConstraints = false
@@ -53,7 +55,7 @@ class FeedViewController: UIViewController {
         self.view.addSubview(self.checkGuessLable)
         self.view.addSubview(self.checkGuessTextField)
         self.view.addSubview(self.checkGuessButton)
-        
+        bindFeedViewModel()
         let leftbutton = UIButton()
         
         leftbutton.setImage(UIImage(systemName: "arrowshape.left"), for: .normal)
@@ -85,6 +87,21 @@ class FeedViewController: UIViewController {
             self.checkGuessLable.widthAnchor.constraint(equalToConstant: 200)
             
         ])
+    }
+    
+    private func bindFeedViewModel(){
+        feedViewModel.stateChanged = { [weak self] state in
+            switch state {
+            case .initial:
+                print("initial")
+            case .loading:
+                print("loading")
+            case .loaded(let feedWord):
+                self?.feedSecretWord = [feedWord]
+            case .error:
+                print("error")
+            }
+        }
     }
     
     @objc private func checkGuessButtonAction() {

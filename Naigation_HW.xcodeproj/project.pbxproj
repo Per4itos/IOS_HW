@@ -200,7 +200,7 @@
 				BC683E6B28C36776002DD0FE /* PostBarController.swift */,
 				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
 				E708F0DF2A5324F8009F42CA /* Library */,
-				E79D8A332A5C05DD000003DD /* FeedView */,
+				E79D8A332A5C05DD000003DD /* Feed */,
 				E7A7919A2A60016400D56CEB /* PhotoView */,
 				E7A7919B2A60017700D56CEB /* LoginView */,
 				E79D8A322A5C05BA000003DD /* Customs */,
@@ -278,14 +278,14 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		E79D8A332A5C05DD000003DD /* FeedView */ = {
+		E79D8A332A5C05DD000003DD /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				E7B46C6A2A6162890092A709 /* FeedModel.swift */,
-				E79D8A362A5C140A000003DD /* FeedViewModel.swift */,
+				E7B46C702A61870D0092A709 /* Models */,
+				E7B46C732A6187950092A709 /* ViewModels */,
 				BC683E6528C366D9002DD0FE /* FeedViewController.swift */,
 			);
-			path = FeedView;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		E7A7919A2A60016400D56CEB /* PhotoView */ = {
@@ -306,6 +306,22 @@
 				BCA6373128C9F23400C65D52 /* LogInViewController.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		E7B46C702A61870D0092A709 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7B46C6A2A6162890092A709 /* FeedModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7B46C732A6187950092A709 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E79D8A362A5C140A000003DD /* FeedViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E7CEB4D52A56D9A5000D5410 /* LoginFactory */ = {
