@@ -8,6 +8,8 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    
+    var appCoordinator: AppCoordinator?
     var window: UIWindow?
    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -15,6 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: windowScene)
+        
+        appCoordinator = AppCoordinator(window: window!)
+        appCoordinator?.start()
         
         let factory = MyLoginFactoryStruct()
         let loginInsectr = factory.makeLoginInspector()

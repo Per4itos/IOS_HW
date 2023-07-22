@@ -9,6 +9,8 @@ import UIKit
 
 class FeedViewController: UIViewController {
     
+    var coordinator: FeedFlow?
+    
     var feedViewModel = FeedViewModel(feedModel: .init())
     
     var loginInspectr: LoginInspector
@@ -16,9 +18,9 @@ class FeedViewController: UIViewController {
     private var feedSecretWord = [FeedModelStruct]()
     
     init(loginInspectr: LoginInspector) {
-        
+
         self.loginInspectr = loginInspectr
-        
+
         super.init(nibName: nil, bundle: nil)
     }
     

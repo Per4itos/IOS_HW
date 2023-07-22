@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    var coordinator: ProfileCoordinator?
     
     var user: User
     

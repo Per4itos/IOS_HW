@@ -9,6 +9,8 @@ import UIKit
 
 class PostViewController: UIViewController {
     
+    var coordinator: PostFlow?
+    
     var titlePost: String = "New Post"
     
     private func setupViews() {

@@ -9,6 +9,8 @@ import UIKit
 
 final class LogInViewController: UIViewController  {
     
+    var coordinator: LoginCoordinator?
+    
     var loginInspectr: LoginInspector
     
     init(loginInspectr: LoginInspector) {

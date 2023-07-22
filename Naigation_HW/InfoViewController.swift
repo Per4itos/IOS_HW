@@ -9,6 +9,8 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    var coordinator: InfoCoordinate?
+    
     private lazy var closeButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 250, height: 50))
         button.setTitle("Go in", for: .normal)
