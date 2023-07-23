@@ -17,6 +17,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
@@ -36,10 +37,10 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         self.imageView.image = photo
     }
     
-    func setupCell(for imageName:String, or indexPath: IndexPath, arrayOfImages: [UIImage]) {
-        let arrayOfFinishedImages: [UIImage] = PhotoCollectionFilter().createArrayOfImages(arrayOf: arrayOfImages)
-        imageView.image = arrayOfFinishedImages[indexPath.row]
-    }
+//    func setupCell(for imageName:String, or indexPath: IndexPath, arrayOfImages: [UIImage]) {
+//        let arrayOfFinishedImages: [UIImage] = PhotoCollectionFilter().createArrayOfImages(arrayOf: arrayOfImages)
+//        imageView.image = arrayOfFinishedImages[indexPath.row]
+//    }
     
     private func setupView() {
         self.contentView.addSubview(self.imageView)

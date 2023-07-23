@@ -9,11 +9,11 @@ import UIKit
 import iOSIntPackage
 
 
-class PhotosViewController: UIViewController, ImageLibrarySubscriber {
+class PhotosViewController: UIViewController {
     
     private lazy var facade = ImagePublisherFacade()
     
-    private lazy var arayOfImagesForObserver = [UIImage]()
+//    private lazy var arayOfImagesForObserver = [UIImage]()
     
     private var arayOfImages = [UIImage]()
     
@@ -26,10 +26,31 @@ class PhotosViewController: UIViewController, ImageLibrarySubscriber {
     private func setupArray() {
         
         Photos.shared.photo.forEach { photo in
-            self.arayOfImagesForObserver.append(photo)
+            self.arayOfImages.append(photo)
         }
-        facade.addImagesWithTimer(time: 0.5, repeat: 20, userImages: arayOfImagesForObserver)
+
+        let imageProcess = ImageProcessor()
+        
+        let startPhotoUpdates = DispatchTime.now()
+        
+        imageProcess.processImagesOnThread(sourceImages: arayOfImages, filter: .colorInvert, qos: .utility) { [weak self] image in
+            DispatchQueue.main.async {
+                self?.arayOfImages = image.map({ image in
+                    UIImage(cgImage: image!) })
+                
+                self?.collectionView.reloadData()
+            }
+            
+            let endPhotosUpdate = DispatchTime.now()
+            
+            let nanoTime = endPhotosUpdate.uptimeNanoseconds - startPhotoUpdates.uptimeNanoseconds
+            
+            let timeInterval = Double(nanoTime) / 1_000_000_000
+            
+            print("Time interval \(timeInterval) second")
+        }
     }
+    
     
     private lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -49,6 +70,9 @@ class PhotosViewController: UIViewController, ImageLibrarySubscriber {
         return collectionView
     }()
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -63,11 +87,11 @@ class PhotosViewController: UIViewController, ImageLibrarySubscriber {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        facade.removeSubscription(for: self)
+//       facade.removeSubscription(for: self)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        facade.subscribe(self)
+//        facade.subscribe(self)
     }
     
     
@@ -94,9 +118,10 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! PhotoCollectionViewCell
+        
         cell.backgroundColor = .gray
         cell.clipsToBounds = true
-        cell.prhotoConfige(photo: Photos.shared.photo[indexPath.item])
+        cell.prhotoConfige(photo: arayOfImages[indexPath.item])
         
         return cell
     }
@@ -113,7 +138,7 @@ extension PhotosViewController: UICollectionViewDataSource, UICollectionViewDele
     }
 }
 
-extension PhotosViewController {
+extension PhotosViewController: ImageLibrarySubscriber {
     
     func receive(images: [UIImage]) {
         self.arayOfImages = images
