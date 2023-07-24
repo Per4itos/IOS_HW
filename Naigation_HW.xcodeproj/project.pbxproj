@@ -55,6 +55,7 @@
 		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
 		E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */; };
 		E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */; };
+		E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FDB3F92A6EA0E50068868D /* BruteForce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		E7B46C6A2A6162890092A709 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
+		E7FDB3F92A6EA0E50068868D /* BruteForce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BruteForce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				BCA6373128C9F23400C65D52 /* LogInViewController.swift */,
+				E7FDB3F92A6EA0E50068868D /* BruteForce.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				E7188BAC2A6C01D700CFCB78 /* AppTabBarCoordinator.swift in Sources */,
 				BC683E3628C36540002DD0FE /* AppDelegate.swift in Sources */,
 				E7188BA62A6BFE5000CFCB78 /* LoginCoordinator.swift in Sources */,
+				E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */,
 				BC683E6828C366EC002DD0FE /* ProfileViewController.swift in Sources */,
 				BC683E7228C369AF002DD0FE /* ProfileHeaderView.swift in Sources */,
 				E7188B9E2A6BFAEE00CFCB78 /* AppCoorditaor.swift in Sources */,

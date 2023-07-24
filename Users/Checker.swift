@@ -8,8 +8,9 @@
 import UIKit
 
 final class Checker  {
-    let login = "n"
-    let password = "1"
+    
+    var login = "n"
+    var password = "1"
     
     static let shared = Checker()
     

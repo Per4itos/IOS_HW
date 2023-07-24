@@ -29,9 +29,23 @@ final class LogInViewController: UIViewController  {
     var testLogIn = TestUserSercive()
     var user: User?
     
+    var bruteForce = BruteForce()
+    
+    let concurrentQueue = DispatchQueue(label: "App.cuncurrent", qos: .userInteractive, attributes: [.concurrent])
+    
     
     
     let imageVk = UIImage(named: "logovk" )
+    
+    private lazy var createPasswordButton = CustomButton(title: "сгенерируйте пароль", titleColor: .gray, buttonColor: .blue, buttonCornRadius: 10, shadow: false, tapAction: {
+        self.generateButtonAction()})
+    
+    
+    private lazy var activityInticator: UIActivityIndicatorView = {
+        let activityInticator = UIActivityIndicatorView(style: .large)
+        activityInticator.translatesAutoresizingMaskIntoConstraints = false
+        return activityInticator
+    }()
     
     private lazy var scroleView: UIScrollView = {
         let scroleView = UIScrollView()
@@ -52,7 +66,7 @@ final class LogInViewController: UIViewController  {
     
     private lazy var textStackView: UIStackView = {
         let textStackView = UIStackView()
-    
+        
         textStackView.distribution = .fillEqually
         textStackView.axis = .vertical
         textStackView.layer.borderColor = UIColor.lightGray.cgColor
@@ -144,6 +158,9 @@ final class LogInViewController: UIViewController  {
         self.scroleView.addSubview(self.imageView)
         self.textStackView.addSubview(self.logInTextField)
         self.textStackView.addSubview(self.passwordTextField)
+        self.scroleView.addSubview(self.createPasswordButton)
+        self.scroleView.addSubview(self.activityInticator)
+        
         
         NSLayoutConstraint.activate([
             
@@ -179,6 +196,15 @@ final class LogInViewController: UIViewController  {
             self.logInButton.rightAnchor.constraint(equalTo: self.textStackView.rightAnchor),
             self.logInButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.0558036),
             self.logInButton.leftAnchor.constraint(equalTo: self.textStackView.leftAnchor),
+            
+            self.activityInticator.bottomAnchor.constraint(equalTo: self.textStackView.topAnchor, constant: -16),
+            self.activityInticator.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -50),
+            self.activityInticator.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 50),
+            
+            self.createPasswordButton.topAnchor.constraint(equalTo: self.logInButton.bottomAnchor, constant: 16),
+            self.createPasswordButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16),
+            self.createPasswordButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -16),
+            self.createPasswordButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -258,6 +284,26 @@ final class LogInViewController: UIViewController  {
             let alert = UIAlertController(title: "Incorrect login", message: "Please, enter correct login", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .cancel))
             self.present(alert, animated: true)
+        }
+        
+    }
+    
+    @objc private func generateButtonAction() {
+        
+        activityInticator.startAnimating()
+        var ascChecker = Checker.shared
+        
+        concurrentQueue.async { [self] in
+            
+            let generatedPassword = bruteForce.randomPass()
+            bruteForce.bruteForce(passwordToUnlock: generatedPassword)
+            
+            ascChecker.password = generatedPassword
+            DispatchQueue.main.async { [self] in
+                passwordTextField.text = generatedPassword
+                passwordTextField.isSecureTextEntry = false
+                activityInticator.stopAnimating()
+            }
         }
     }
 }

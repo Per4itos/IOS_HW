@@ -11,7 +11,7 @@ class FeedViewController: UIViewController {
     
     var coordinator: FeedFlow?
     
-    var feedViewModel = FeedViewModel(feedModel: .init())
+    var feedViewModel = FeedViewModel(feedModel: FeedModel())
     
     var loginInspectr: LoginInspector
     
