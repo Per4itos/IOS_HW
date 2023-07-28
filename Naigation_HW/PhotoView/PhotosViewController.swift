@@ -13,7 +13,7 @@ class PhotosViewController: UIViewController {
     
     private lazy var facade = ImagePublisherFacade()
     
-//    private lazy var arayOfImagesForObserver = [UIImage]()
+    //    private lazy var arayOfImagesForObserver = [UIImage]()
     
     private var arayOfImages = [UIImage]()
     
@@ -23,17 +23,44 @@ class PhotosViewController: UIViewController {
         
     }
     
+    private func arrayFilling() throws -> [UIImage] {
+            
+        Photos.shared.photo.forEach { photo in
+            self.arayOfImages.append(photo) }
+        
+        if Photos.shared.photo.count == 0 {
+            throw NetworkError.wrongConnection
+        } else if arayOfImages.count == 0 {
+            throw NetworkError.incorrectDate
+        } else {
+            return arayOfImages
+        }
+    }
+    
     private func setupArray() {
         
-        Photos.shared.photo.forEach { photo in
-            self.arayOfImages.append(photo)
+        do {
+            arayOfImages = try arrayFilling()
+        } catch NetworkError.incorrectDate {
+            print("Error: incrorrectDate")
+            let alert = UIAlertController(title: "Photos not added yet", message: "Please, add photos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Add photos", style: .default))
+            alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+            self.present(alert, animated: true)
+        } catch NetworkError.wrongConnection {
+            print("Error: wrongConnection")
+            let alert = UIAlertController(title: "No connection to server", message: "Please, reload the page", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+            self.present(alert, animated: true)
+        } catch {
+            print("Unknow error")
         }
-
+        
         let imageProcess = ImageProcessor()
         
         let startPhotoUpdates = DispatchTime.now()
         
-        imageProcess.processImagesOnThread(sourceImages: arayOfImages, filter: .colorInvert, qos: .utility) { [weak self] image in
+        imageProcess.processImagesOnThread(sourceImages: arayOfImages, filter: .chrome, qos: .utility) { [weak self] image in
             DispatchQueue.main.async {
                 self?.arayOfImages = image.map({ image in
                     UIImage(cgImage: image!) })
@@ -50,7 +77,6 @@ class PhotosViewController: UIViewController {
             print("Time interval \(timeInterval) second")
         }
     }
-    
     
     private lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -70,9 +96,6 @@ class PhotosViewController: UIViewController {
         return collectionView
     }()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -87,11 +110,11 @@ class PhotosViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//       facade.removeSubscription(for: self)
+        //       facade.removeSubscription(for: self)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        facade.subscribe(self)
+        //        facade.subscribe(self)
     }
     
     

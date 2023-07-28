@@ -42,8 +42,6 @@
 		E73DD4E02A53E9720015ED0B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDFB08428DDE3DB00D283B8 /* Post.swift */; };
 		E73DD4E72A53EDD70015ED0B /* PostHEaderCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DD4E62A53EDD70015ED0B /* PostHEaderCollection.swift */; };
 		E74399CD2A556BE200280019 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399CC2A556BE200280019 /* User.swift */; };
-		E74399CF2A55705800280019 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399CE2A55705800280019 /* CurrentUserService.swift */; };
-		E74399D12A55706600280019 /* TestUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D02A55706600280019 /* TestUserService.swift */; };
 		E74399D32A55706D00280019 /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D22A55706D00280019 /* UserServiceProtocol.swift */; };
 		E74399D72A559C2C00280019 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D62A559C2C00280019 /* Checker.swift */; };
 		E74399DA2A559D2700280019 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */; };
@@ -53,6 +51,7 @@
 		E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2542A73CD8200226B39 /* CustomAlertView.swift */; };
 		E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2562A73D4B600226B39 /* SetupAtributes.swift */; };
 		E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = E758A2592A73D7BC00226B39 /* SwiftEntryKit */; };
+		E78F689C2A73DD7C00A38393 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */; };
 		E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustomButton.swift */; };
 		E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedViewModel.swift */; };
 		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
@@ -138,8 +137,6 @@
 		E73DD4D52A53E96D0015ED0B /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
 		E73DD4E62A53EDD70015ED0B /* PostHEaderCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHEaderCollection.swift; sourceTree = "<group>"; };
 		E74399CC2A556BE200280019 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E74399CE2A55705800280019 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
-		E74399D02A55706600280019 /* TestUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserService.swift; sourceTree = "<group>"; };
 		E74399D22A55706D00280019 /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		E74399D62A559C2C00280019 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +144,7 @@
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
 		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		E758A2562A73D4B600226B39 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
+		E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 		E79D8A342A5C05FE000003DD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E79D8A362A5C140A000003DD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		E7B46C6A2A6162890092A709 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
@@ -244,6 +242,7 @@
 				BC683E7128C369AF002DD0FE /* ProfileHeaderView.swift */,
 				BC87040728DF19EE00DFC66C /* PostTableViewCell.swift */,
 				BC683E7328C36A75002DD0FE /* Profile.swift */,
+				E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -287,8 +286,6 @@
 		E74399CB2A556BC800280019 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				E74399CE2A55705800280019 /* CurrentUserService.swift */,
-				E74399D02A55706600280019 /* TestUserService.swift */,
 				E74399CC2A556BE200280019 /* User.swift */,
 				E74399D22A55706D00280019 /* UserServiceProtocol.swift */,
 			);
@@ -580,10 +577,10 @@
 				BC683E7428C36A75002DD0FE /* Profile.swift in Sources */,
 				E7188BA22A6BFC6D00CFCB78 /* FeedCoordinator.swift in Sources */,
 				BC87040828DF19EF00DFC66C /* PostTableViewCell.swift in Sources */,
-				E74399CF2A55705800280019 /* CurrentUserService.swift in Sources */,
 				E7188BAC2A6C01D700CFCB78 /* AppTabBarCoordinator.swift in Sources */,
 				BC683E3628C36540002DD0FE /* AppDelegate.swift in Sources */,
 				E7188BA62A6BFE5000CFCB78 /* LoginCoordinator.swift in Sources */,
+				E78F689C2A73DD7C00A38393 /* ErrorEnum.swift in Sources */,
 				E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */,
 				BC683E6828C366EC002DD0FE /* ProfileViewController.swift in Sources */,
 				E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */,
@@ -592,7 +589,6 @@
 				BC683E6C28C36776002DD0FE /* PostBarController.swift in Sources */,
 				E7188B9C2A6BF93900CFCB78 /* Coordinator.swift in Sources */,
 				E7188BA42A6BFD9500CFCB78 /* InfoCoordinate.swift in Sources */,
-				E74399D12A55706600280019 /* TestUserService.swift in Sources */,
 				E708F0E42A5325CA009F42CA /* PhotosCollection.swift in Sources */,
 				BC683E6628C366D9002DD0FE /* FeedViewController.swift in Sources */,
 				E74399D32A55706D00280019 /* UserServiceProtocol.swift in Sources */,

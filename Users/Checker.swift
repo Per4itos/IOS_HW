@@ -16,12 +16,12 @@ final class Checker  {
     
     private init() {}
     
-    func check(log: String, pass: String) -> Bool {
+    func check(log: String, pass: String) -> Result<Bool, NetworkError> {
         
         if log == login && pass == password {
-            return true
+            return .success(true)
         }else{
-            return false
+            return .failure(NetworkError.incorrectDate)
         }
     }
     

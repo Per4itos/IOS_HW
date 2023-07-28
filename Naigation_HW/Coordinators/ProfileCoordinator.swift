@@ -9,11 +9,6 @@ import UIKit
 
 class ProfileCoordinator: Coordinator {
     
-#if DEBUG
-    var userService = TestUserSercive()
-#else
-    var userService = CurrentUserService()
-#endif
     
     let navigationController: UINavigationController
     
@@ -22,7 +17,7 @@ class ProfileCoordinator: Coordinator {
     }
     
     func start() {
-        let user = userService.user
+        let user = User(logIn: "adham", name: "adham", image: UIImage(named: "image3")!, status: "active")
         
         let profileViewController = ProfileViewController(user: user)
         profileViewController.coordinator = self

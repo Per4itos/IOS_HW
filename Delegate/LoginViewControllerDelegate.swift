@@ -9,6 +9,6 @@ import UIKit
 
 protocol LoginViewControllerDelegate {
     
-    func check(log: String, pass: String) -> Bool 
+    func check(log: String, pass: String) -> Result<Bool, NetworkError> 
     
 }

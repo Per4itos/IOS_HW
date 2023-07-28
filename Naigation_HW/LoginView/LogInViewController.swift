@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LogInViewController: UIViewController  {
+final class LogInViewController: UIViewController {
     
     var coordinator: LoginCoordinator?
     
@@ -25,8 +25,6 @@ final class LogInViewController: UIViewController  {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var currentLogIn = CurrentUserService()
-    var testLogIn = TestUserSercive()
     var user: User?
     
     var bruteForce = BruteForce()
@@ -239,7 +237,7 @@ final class LogInViewController: UIViewController  {
     
     @objc private func buttonAction2() {
         
-        if loginInspectr.check(log: logInTextField.text!, pass: passwordTextField.text!) == true {
+        if loginInspectr.check(log: logInTextField.text!, pass: passwordTextField.text!) == .success(true) {
             let user = User(logIn: "adham", name: "adham", image: UIImage(named: "image3")!, status: "active")
             
             let tabBarController = UITabBarController()
@@ -290,7 +288,7 @@ final class LogInViewController: UIViewController  {
     @objc private func generateButtonAction() {
         
         activityInticator.startAnimating()
-        var ascChecker = Checker.shared
+        let ascChecker = Checker.shared
         
         concurrentQueue.async { [self] in
             
