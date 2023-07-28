@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import SwiftEntryKit
 
 class ProfileViewController: UIViewController {
     
     var coordinator: ProfileCoordinator?
-    
+
     var user: User
+    
+    var timer: Timer?
     
     init(user: User) {
         self.user = user
@@ -44,6 +47,7 @@ class ProfileViewController: UIViewController {
         self.view.addSubview(self.tableView)
         self.setupHeader()
         self.navigationController?.navigationBar.backgroundColor = .white
+        self.premiumAllert()
         
 #if DEBUG
         self.view.backgroundColor = .yellow
@@ -53,6 +57,19 @@ class ProfileViewController: UIViewController {
         
 #endif
     }
+    
+    func timerPremiumAllert() {
+
+           timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(premiumAllert), userInfo: nil, repeats: true)
+        }
+
+        deinit {
+            timer?.invalidate()
+        }
+
+        @objc private func premiumAllert() {
+            SwiftEntryKit.display(entry: CustomAlertView(image: user.image, name: "Hey, \(user.name)! we have free Primium Subscribe for you"), using: setupAttributes())
+        }
     
     private func setupHeader() {
         

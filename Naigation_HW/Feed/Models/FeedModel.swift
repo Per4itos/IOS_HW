@@ -13,10 +13,10 @@ struct FeedModelStruct {
     
 }
 
-   class FeedModel {
+class FeedModel {
     
     var feedWord = FeedModelStruct(word: "1")
-
+    
     func fetch(completion: @escaping (Result<FeedModelStruct, Error>) -> Void) {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
@@ -24,6 +24,7 @@ struct FeedModelStruct {
             completion(.success(self.feedWord))
         }
     }
-    
 }
+
+
 

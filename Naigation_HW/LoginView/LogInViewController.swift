@@ -197,9 +197,8 @@ final class LogInViewController: UIViewController  {
             self.logInButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.0558036),
             self.logInButton.leftAnchor.constraint(equalTo: self.textStackView.leftAnchor),
             
-            self.activityInticator.bottomAnchor.constraint(equalTo: self.textStackView.topAnchor, constant: -16),
-            self.activityInticator.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -50),
-            self.activityInticator.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 50),
+            self.activityInticator.bottomAnchor.constraint(equalTo: self.textStackView.topAnchor, constant: -20),
+            self.activityInticator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
             self.createPasswordButton.topAnchor.constraint(equalTo: self.logInButton.bottomAnchor, constant: 16),
             self.createPasswordButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16),

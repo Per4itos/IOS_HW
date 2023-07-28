@@ -50,6 +50,9 @@
 		E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399DB2A55BBDE00280019 /* LoginInspector.swift */; };
 		E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E75342C12A570441007148F0 /* iOSIntPackage */; };
 		E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */; };
+		E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2542A73CD8200226B39 /* CustomAlertView.swift */; };
+		E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2562A73D4B600226B39 /* SetupAtributes.swift */; };
+		E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = E758A2592A73D7BC00226B39 /* SwiftEntryKit */; };
 		E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustomButton.swift */; };
 		E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedViewModel.swift */; };
 		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
@@ -142,6 +145,8 @@
 		E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E74399DB2A55BBDE00280019 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
+		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		E758A2562A73D4B600226B39 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
 		E79D8A342A5C05FE000003DD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E79D8A362A5C140A000003DD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		E7B46C6A2A6162890092A709 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 			files = (
 				E73DD4DA2A53E96D0015ED0B /* StorageService.framework in Frameworks */,
 				E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */,
+				E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +239,7 @@
 		BC683E7028C368B6002DD0FE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E758A2532A73CD6A00226B39 /* Alerts */,
 				BC683E6728C366EC002DD0FE /* ProfileViewController.swift */,
 				BC683E7128C369AF002DD0FE /* ProfileHeaderView.swift */,
 				BC87040728DF19EE00DFC66C /* PostTableViewCell.swift */,
@@ -304,6 +311,15 @@
 				E74399DB2A55BBDE00280019 /* LoginInspector.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		E758A2532A73CD6A00226B39 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				E758A2542A73CD8200226B39 /* CustomAlertView.swift */,
+				E758A2562A73D4B600226B39 /* SetupAtributes.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		E79D8A322A5C05BA000003DD /* Customs */ = {
@@ -402,6 +418,7 @@
 			name = Naigation_HW;
 			packageProductDependencies = (
 				E75342C12A570441007148F0 /* iOSIntPackage */,
+				E758A2592A73D7BC00226B39 /* SwiftEntryKit */,
 			);
 			productName = Naigation_HW;
 			productReference = BC683E3228C36540002DD0FE /* Naigation_HW.app */;
@@ -498,6 +515,7 @@
 			mainGroup = BC683E2928C36540002DD0FE;
 			packageReferences = (
 				E75342C02A570441007148F0 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
+				E758A2582A73D7BC00226B39 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
 			);
 			productRefGroup = BC683E3328C36540002DD0FE /* Products */;
 			projectDirPath = "";
@@ -568,6 +586,7 @@
 				E7188BA62A6BFE5000CFCB78 /* LoginCoordinator.swift in Sources */,
 				E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */,
 				BC683E6828C366EC002DD0FE /* ProfileViewController.swift in Sources */,
+				E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */,
 				BC683E7228C369AF002DD0FE /* ProfileHeaderView.swift in Sources */,
 				E7188B9E2A6BFAEE00CFCB78 /* AppCoorditaor.swift in Sources */,
 				BC683E6C28C36776002DD0FE /* PostBarController.swift in Sources */,
@@ -585,6 +604,7 @@
 				BCB07C4929019CC000C6D752 /* PhotosViewController.swift in Sources */,
 				BCA6373228C9F23400C65D52 /* LogInViewController.swift in Sources */,
 				E74399CD2A556BE200280019 /* User.swift in Sources */,
+				E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */,
 				E7188BAA2A6C00EA00CFCB78 /* ProfileCoordinator.swift in Sources */,
 				E74399DA2A559D2700280019 /* LoginViewControllerDelegate.swift in Sources */,
 				BC683E3828C36540002DD0FE /* SceneDelegate.swift in Sources */,
@@ -1025,6 +1045,14 @@
 				kind = branch;
 			};
 		};
+		E758A2582A73D7BC00226B39 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1032,6 +1060,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E75342C02A570441007148F0 /* XCRemoteSwiftPackageReference "iOSIntPackage" */;
 			productName = iOSIntPackage;
+		};
+		E758A2592A73D7BC00226B39 /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E758A2582A73D7BC00226B39 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
