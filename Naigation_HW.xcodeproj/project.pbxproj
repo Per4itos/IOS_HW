@@ -52,6 +52,14 @@
 		E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2562A73D4B600226B39 /* SetupAtributes.swift */; };
 		E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = E758A2592A73D7BC00226B39 /* SwiftEntryKit */; };
 		E78F689C2A73DD7C00A38393 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */; };
+		E78F689F2A74069A00A38393 /* AudioStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F689E2A74069A00A38393 /* AudioStruct.swift */; };
+		E78F68AB2A74098300A38393 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */; };
+		E78F68AD2A740C9200A38393 /* AudioViewCiontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F68AC2A740C9200A38393 /* AudioViewCiontroller.swift */; };
+		E78F68B32A740EAA00A38393 /* Nils Frahm - You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68AE2A740EAA00A38393 /* Nils Frahm - You.mp3 */; };
+		E78F68B42A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68AF2A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */; };
+		E78F68B52A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68B02A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */; };
+		E78F68B62A740EAA00A38393 /* Death Grips - Beware.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68B12A740EAA00A38393 /* Death Grips - Beware.mp3 */; };
+		E78F68B72A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68B22A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 */; };
 		E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustomButton.swift */; };
 		E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedViewModel.swift */; };
 		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
@@ -145,6 +153,14 @@
 		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		E758A2562A73D4B600226B39 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
 		E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
+		E78F689E2A74069A00A38393 /* AudioStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStruct.swift; sourceTree = "<group>"; };
+		E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
+		E78F68AC2A740C9200A38393 /* AudioViewCiontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewCiontroller.swift; sourceTree = "<group>"; };
+		E78F68AE2A740EAA00A38393 /* Nils Frahm - You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Nils Frahm - You.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Nils Frahm - You.mp3"; sourceTree = "<group>"; };
+		E78F68AF2A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Joy Wants Eternity - From Embrace To Embrace.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Joy Wants Eternity - From Embrace To Embrace.mp3"; sourceTree = "<group>"; };
+		E78F68B02A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3"; sourceTree = "<group>"; };
+		E78F68B12A740EAA00A38393 /* Death Grips - Beware.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Death Grips - Beware.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Death Grips - Beware.mp3"; sourceTree = "<group>"; };
+		E78F68B22A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Sufjan Stevens - I Walked.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Sufjan Stevens - I Walked.mp3"; sourceTree = "<group>"; };
 		E79D8A342A5C05FE000003DD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E79D8A362A5C140A000003DD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		E7B46C6A2A6162890092A709 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
@@ -223,6 +239,7 @@
 				BC683E6928C36768002DD0FE /* PostViewController.swift */,
 				BC683E6B28C36776002DD0FE /* PostBarController.swift */,
 				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
+				E78F689D2A74067F00A38393 /* Audio */,
 				E7188B9A2A6BF91800CFCB78 /* Coordinators */,
 				E708F0DF2A5324F8009F42CA /* Library */,
 				E79D8A332A5C05DD000003DD /* Feed */,
@@ -317,6 +334,21 @@
 				E758A2562A73D4B600226B39 /* SetupAtributes.swift */,
 			);
 			path = Alerts;
+			sourceTree = "<group>";
+		};
+		E78F689D2A74067F00A38393 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E78F689E2A74069A00A38393 /* AudioStruct.swift */,
+				E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */,
+				E78F68AC2A740C9200A38393 /* AudioViewCiontroller.swift */,
+				E78F68B12A740EAA00A38393 /* Death Grips - Beware.mp3 */,
+				E78F68AF2A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */,
+				E78F68AE2A740EAA00A38393 /* Nils Frahm - You.mp3 */,
+				E78F68B02A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */,
+				E78F68B22A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		E79D8A322A5C05BA000003DD /* Customs */ = {
@@ -531,8 +563,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78F68B62A740EAA00A38393 /* Death Grips - Beware.mp3 in Resources */,
 				BC683E4228C36542002DD0FE /* LaunchScreen.storyboard in Resources */,
+				E78F68B52A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 in Resources */,
+				E78F68B32A740EAA00A38393 /* Nils Frahm - You.mp3 in Resources */,
 				BC683E3F28C36542002DD0FE /* Assets.xcassets in Resources */,
+				E78F68B72A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 in Resources */,
+				E78F68B42A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +631,8 @@
 				E74399D32A55706D00280019 /* UserServiceProtocol.swift in Sources */,
 				BCB07C472901995300C6D752 /* PhotosTableViewCell.swift in Sources */,
 				E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */,
+				E78F689F2A74069A00A38393 /* AudioStruct.swift in Sources */,
+				E78F68AD2A740C9200A38393 /* AudioViewCiontroller.swift in Sources */,
 				BC683E6E28C367C8002DD0FE /* InfoViewController.swift in Sources */,
 				E708F0E62A5325E0009F42CA /* PostHeader.swift in Sources */,
 				E73DD4E72A53EDD70015ED0B /* PostHEaderCollection.swift in Sources */,
@@ -603,6 +642,7 @@
 				E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */,
 				E7188BAA2A6C00EA00CFCB78 /* ProfileCoordinator.swift in Sources */,
 				E74399DA2A559D2700280019 /* LoginViewControllerDelegate.swift in Sources */,
+				E78F68AB2A74098300A38393 /* AudioTableViewCell.swift in Sources */,
 				BC683E3828C36540002DD0FE /* SceneDelegate.swift in Sources */,
 				E74399D72A559C2C00280019 /* Checker.swift in Sources */,
 				E7188BA02A6BFBA100CFCB78 /* AppTabBarController.swift in Sources */,

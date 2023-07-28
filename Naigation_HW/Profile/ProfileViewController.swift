@@ -34,12 +34,13 @@ class ProfileViewController: UIViewController {
         tableView.register(ProfileHeaderView.self, forHeaderFooterViewReuseIdentifier: "Header")
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         tableView.register(PhotosTableViewCell.self, forCellReuseIdentifier: "TableHeader")
+        tableView.register(AudioTableViewCell.self, forCellReuseIdentifier: "AudioTable")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         return tableView
     }()
     var post2 = postSetup
-    var post3 = headerSetup
+    var post = headerSetup
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,18 +89,26 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
+        } else if section == 1 {
+            return 1
         }
         return self.post2.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == .zero {
+        if indexPath.section == 0 {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "AudioTable", for: indexPath) as! AudioTableViewCell
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            
+            return cell
+        }else if indexPath.section == 1 {
+            
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableHeader", for: indexPath) as! PhotosTableViewCell
-            let post = post3[indexPath.row]
+            let post = post[indexPath.row]
             cell.setup(with: post)
             
             return cell
-        }else {
+        }else  {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! PostTableViewCell
             let post = postSetup[indexPath.row]
             
@@ -110,18 +119,24 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == .zero {
+            return 50
+        } else if indexPath.section == 1 {
             return 150
         }
         return 600
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == .zero {
+        
+        if indexPath.section == 0 {
+            let audioTap = AudioViewCiontroller()
+            navigationController?.pushViewController(audioTap, animated: true)
+        }else if indexPath.section == 1 {
             let destination = PhotosViewController()
             navigationController?.pushViewController(destination, animated: true)
         }
