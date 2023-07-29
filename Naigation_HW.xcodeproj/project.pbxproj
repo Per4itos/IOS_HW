@@ -55,16 +55,16 @@
 		E78F689F2A74069A00A38393 /* AudioStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F689E2A74069A00A38393 /* AudioStruct.swift */; };
 		E78F68AB2A74098300A38393 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */; };
 		E78F68AD2A740C9200A38393 /* AudioViewCiontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F68AC2A740C9200A38393 /* AudioViewCiontroller.swift */; };
-		E78F68B32A740EAA00A38393 /* Nils Frahm - You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68AE2A740EAA00A38393 /* Nils Frahm - You.mp3 */; };
-		E78F68B42A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68AF2A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */; };
-		E78F68B52A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68B02A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */; };
-		E78F68B62A740EAA00A38393 /* Death Grips - Beware.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68B12A740EAA00A38393 /* Death Grips - Beware.mp3 */; };
-		E78F68B72A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E78F68B22A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 */; };
 		E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustomButton.swift */; };
 		E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedViewModel.swift */; };
 		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
 		E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */; };
 		E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */; };
+		E7D831A12A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319C2A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 */; };
+		E7D831A22A750B0B0062D3B6 /* Death Grips - Beware.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319D2A750B0B0062D3B6 /* Death Grips - Beware.mp3 */; };
+		E7D831A32A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319E2A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */; };
+		E7D831A42A750B0B0062D3B6 /* Nils Frahm - You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319F2A750B0B0062D3B6 /* Nils Frahm - You.mp3 */; };
+		E7D831A52A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D831A02A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */; };
 		E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FDB3F92A6EA0E50068868D /* BruteForce.swift */; };
 /* End PBXBuildFile section */
 
@@ -156,16 +156,16 @@
 		E78F689E2A74069A00A38393 /* AudioStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStruct.swift; sourceTree = "<group>"; };
 		E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
 		E78F68AC2A740C9200A38393 /* AudioViewCiontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewCiontroller.swift; sourceTree = "<group>"; };
-		E78F68AE2A740EAA00A38393 /* Nils Frahm - You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Nils Frahm - You.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Nils Frahm - You.mp3"; sourceTree = "<group>"; };
-		E78F68AF2A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Joy Wants Eternity - From Embrace To Embrace.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Joy Wants Eternity - From Embrace To Embrace.mp3"; sourceTree = "<group>"; };
-		E78F68B02A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3"; sourceTree = "<group>"; };
-		E78F68B12A740EAA00A38393 /* Death Grips - Beware.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Death Grips - Beware.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Death Grips - Beware.mp3"; sourceTree = "<group>"; };
-		E78F68B22A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Sufjan Stevens - I Walked.mp3"; path = "../../../../Downloads/ios-homework-79ba02a04d4383c057e1276a9044bbb3a9e6704d/Navigation/Navigation/Audio/Sufjan Stevens - I Walked.mp3"; sourceTree = "<group>"; };
 		E79D8A342A5C05FE000003DD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E79D8A362A5C140A000003DD /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		E7B46C6A2A6162890092A709 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
+		E7D8319C2A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sufjan Stevens - I Walked.mp3"; sourceTree = "<group>"; };
+		E7D8319D2A750B0B0062D3B6 /* Death Grips - Beware.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Death Grips - Beware.mp3"; sourceTree = "<group>"; };
+		E7D8319E2A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Joy Wants Eternity - From Embrace To Embrace.mp3"; sourceTree = "<group>"; };
+		E7D8319F2A750B0B0062D3B6 /* Nils Frahm - You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nils Frahm - You.mp3"; sourceTree = "<group>"; };
+		E7D831A02A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3"; sourceTree = "<group>"; };
 		E7FDB3F92A6EA0E50068868D /* BruteForce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BruteForce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -339,14 +339,14 @@
 		E78F689D2A74067F00A38393 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				E7D8319D2A750B0B0062D3B6 /* Death Grips - Beware.mp3 */,
+				E7D8319E2A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */,
+				E7D8319F2A750B0B0062D3B6 /* Nils Frahm - You.mp3 */,
+				E7D831A02A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */,
+				E7D8319C2A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 */,
 				E78F689E2A74069A00A38393 /* AudioStruct.swift */,
 				E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */,
 				E78F68AC2A740C9200A38393 /* AudioViewCiontroller.swift */,
-				E78F68B12A740EAA00A38393 /* Death Grips - Beware.mp3 */,
-				E78F68AF2A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */,
-				E78F68AE2A740EAA00A38393 /* Nils Frahm - You.mp3 */,
-				E78F68B02A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */,
-				E78F68B22A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -563,13 +563,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E78F68B62A740EAA00A38393 /* Death Grips - Beware.mp3 in Resources */,
+				E7D831A22A750B0B0062D3B6 /* Death Grips - Beware.mp3 in Resources */,
+				E7D831A12A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 in Resources */,
+				E7D831A32A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */,
 				BC683E4228C36542002DD0FE /* LaunchScreen.storyboard in Resources */,
-				E78F68B52A740EAA00A38393 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 in Resources */,
-				E78F68B32A740EAA00A38393 /* Nils Frahm - You.mp3 in Resources */,
+				E7D831A42A750B0B0062D3B6 /* Nils Frahm - You.mp3 in Resources */,
 				BC683E3F28C36542002DD0FE /* Assets.xcassets in Resources */,
-				E78F68B72A740EAA00A38393 /* Sufjan Stevens - I Walked.mp3 in Resources */,
-				E78F68B42A740EAA00A38393 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */,
+				E7D831A52A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
