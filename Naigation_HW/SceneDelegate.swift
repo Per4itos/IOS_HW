@@ -28,6 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = logInViewController
         self.window?.makeKeyAndVisible()
         
+        let randomeValueForAPI = AppConfiguration.allCases.randomElement()!
+        NetworkManager.request(for: randomeValueForAPI)
+        
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

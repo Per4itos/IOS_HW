@@ -46,6 +46,8 @@
 		E74399D72A559C2C00280019 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D62A559C2C00280019 /* Checker.swift */; };
 		E74399DA2A559D2700280019 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */; };
 		E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399DB2A55BBDE00280019 /* LoginInspector.swift */; };
+		E74468E22A76716C00C46BBC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74468E12A76716C00C46BBC /* NetworkManager.swift */; };
+		E74468E42A7671CA00C46BBC /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74468E32A7671CA00C46BBC /* AppConfiguration.swift */; };
 		E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E75342C12A570441007148F0 /* iOSIntPackage */; };
 		E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */; };
 		E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2542A73CD8200226B39 /* CustomAlertView.swift */; };
@@ -149,6 +151,8 @@
 		E74399D62A559C2C00280019 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E74399DB2A55BBDE00280019 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
+		E74468E12A76716C00C46BBC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E74468E32A7671CA00C46BBC /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
 		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		E758A2562A73D4B600226B39 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				BC683E6928C36768002DD0FE /* PostViewController.swift */,
 				BC683E6B28C36776002DD0FE /* PostBarController.swift */,
 				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
+				E74468E02A76714200C46BBC /* NetworkManager */,
 				E78F689D2A74067F00A38393 /* Audio */,
 				E7188B9A2A6BF91800CFCB78 /* Coordinators */,
 				E708F0DF2A5324F8009F42CA /* Library */,
@@ -325,6 +330,15 @@
 				E74399DB2A55BBDE00280019 /* LoginInspector.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		E74468E02A76714200C46BBC /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				E74468E32A7671CA00C46BBC /* AppConfiguration.swift */,
+				E74468E12A76716C00C46BBC /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		E758A2532A73CD6A00226B39 /* Alerts */ = {
@@ -601,6 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74468E22A76716C00C46BBC /* NetworkManager.swift in Sources */,
 				E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */,
 				E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */,
 				BC683E6A28C36769002DD0FE /* PostViewController.swift in Sources */,
@@ -637,6 +652,7 @@
 				E708F0E62A5325E0009F42CA /* PostHeader.swift in Sources */,
 				E73DD4E72A53EDD70015ED0B /* PostHEaderCollection.swift in Sources */,
 				BCB07C4929019CC000C6D752 /* PhotosViewController.swift in Sources */,
+				E74468E42A7671CA00C46BBC /* AppConfiguration.swift in Sources */,
 				BCA6373228C9F23400C65D52 /* LogInViewController.swift in Sources */,
 				E74399CD2A556BE200280019 /* User.swift in Sources */,
 				E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */,
