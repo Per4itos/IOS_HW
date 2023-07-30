@@ -48,6 +48,8 @@
 		E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399DB2A55BBDE00280019 /* LoginInspector.swift */; };
 		E74468E22A76716C00C46BBC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74468E12A76716C00C46BBC /* NetworkManager.swift */; };
 		E74468E42A7671CA00C46BBC /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74468E32A7671CA00C46BBC /* AppConfiguration.swift */; };
+		E74468E72A7692D700C46BBC /* DateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74468E62A7692D700C46BBC /* DateConfig.swift */; };
+		E74468E92A76972700C46BBC /* PlanetDateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74468E82A76972700C46BBC /* PlanetDateConfig.swift */; };
 		E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E75342C12A570441007148F0 /* iOSIntPackage */; };
 		E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */; };
 		E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2542A73CD8200226B39 /* CustomAlertView.swift */; };
@@ -153,6 +155,8 @@
 		E74399DB2A55BBDE00280019 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
 		E74468E12A76716C00C46BBC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E74468E32A7671CA00C46BBC /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		E74468E62A7692D700C46BBC /* DateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConfig.swift; sourceTree = "<group>"; };
+		E74468E82A76972700C46BBC /* PlanetDateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDateConfig.swift; sourceTree = "<group>"; };
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
 		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		E758A2562A73D4B600226B39 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
@@ -242,7 +246,7 @@
 				BC683E3728C36540002DD0FE /* SceneDelegate.swift */,
 				BC683E6928C36768002DD0FE /* PostViewController.swift */,
 				BC683E6B28C36776002DD0FE /* PostBarController.swift */,
-				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
+				E74468E52A7692C000C46BBC /* Info */,
 				E74468E02A76714200C46BBC /* NetworkManager */,
 				E78F689D2A74067F00A38393 /* Audio */,
 				E7188B9A2A6BF91800CFCB78 /* Coordinators */,
@@ -339,6 +343,16 @@
 				E74468E12A76716C00C46BBC /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		E74468E52A7692C000C46BBC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				E74468E62A7692D700C46BBC /* DateConfig.swift */,
+				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
+				E74468E82A76972700C46BBC /* PlanetDateConfig.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		E758A2532A73CD6A00226B39 /* Alerts */ = {
@@ -621,6 +635,7 @@
 				BC683E6A28C36769002DD0FE /* PostViewController.swift in Sources */,
 				E708F0E22A5325C1009F42CA /* PostCollection.swift in Sources */,
 				E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */,
+				E74468E92A76972700C46BBC /* PlanetDateConfig.swift in Sources */,
 				E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */,
 				E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */,
 				BCAAA1812902FE470026605C /* PhotoCollectionViewCell.swift in Sources */,
@@ -630,6 +645,7 @@
 				E7188BA22A6BFC6D00CFCB78 /* FeedCoordinator.swift in Sources */,
 				BC87040828DF19EF00DFC66C /* PostTableViewCell.swift in Sources */,
 				E7188BAC2A6C01D700CFCB78 /* AppTabBarCoordinator.swift in Sources */,
+				E74468E72A7692D700C46BBC /* DateConfig.swift in Sources */,
 				BC683E3628C36540002DD0FE /* AppDelegate.swift in Sources */,
 				E7188BA62A6BFE5000CFCB78 /* LoginCoordinator.swift in Sources */,
 				E78F689C2A73DD7C00A38393 /* ErrorEnum.swift in Sources */,
