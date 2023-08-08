@@ -9,17 +9,17 @@ import Foundation
 
 
 struct LoginInspector: LoginViewControllerDelegate {
-    
-    func check(log: String, pass: String) -> Result<Bool, NetworkError> {
-        
-        if log == Checker.shared.login && pass == Checker.shared.password  {
-        
-            return .success(true)
-            
-        }else {
-            return .failure(NetworkError.incorrectDate)
-        }
-    }
+//    
+//    func check(log: String, pass: String) -> Result<Bool, NetworkError> {
+//
+//        if log == Checker.shared.login && pass == Checker.shared.password  {
+//
+//            return .success(true)
+//
+//        }else {
+//            return .failure(NetworkError.incorrectDate)
+//        }
+//    }
 }
     
 

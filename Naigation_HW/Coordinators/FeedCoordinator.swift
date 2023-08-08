@@ -21,7 +21,7 @@ class FeedCoordinator: Coordinator, FeedFlow {
     
     
     func start() {
-        let feedViewController = FeedViewController(loginInspectr: LoginInspector())
+        let feedViewController = FeedViewController()
         feedViewController.coordinator = self
         
         navigationController?.pushViewController(feedViewController, animated: false)

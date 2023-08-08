@@ -7,6 +7,9 @@
 
 import UIKit
 import SwiftEntryKit
+import Firebase
+import FirebaseCore
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     

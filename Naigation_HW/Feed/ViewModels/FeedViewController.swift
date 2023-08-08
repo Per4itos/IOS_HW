@@ -13,20 +13,20 @@ class FeedViewController: UIViewController {
     
     var feedViewModel = FeedViewModel(feedModel: FeedModel())
     
-    var loginInspectr: LoginInspector
+//    var loginInspectr: LoginInspector
     
     private var feedSecretWord = [FeedModelStruct]()
     
-    init(loginInspectr: LoginInspector) {
-
-        self.loginInspectr = loginInspectr
-
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    init(loginInspectr: LoginInspector) {
+//
+//        self.loginInspectr = loginInspectr
+//
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
         
     private lazy var checkGuessLable: UILabel = {
         let checkGuessLable = UILabel()
@@ -126,7 +126,7 @@ class FeedViewController: UIViewController {
             return
         }
         
-        window.rootViewController = LogInViewController(loginInspectr: loginInspectr)
+        window.rootViewController = LogInViewController()
     }
     
     @objc private func buttonAction() {

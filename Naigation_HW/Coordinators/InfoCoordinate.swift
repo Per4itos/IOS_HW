@@ -17,6 +17,7 @@ class InfoCoordinate: Coordinator {
     func start() {
         let infoNavigationController = InfoViewController()
         infoNavigationController.coordinator = self
+    
         
         navigationController?.pushViewController(infoNavigationController, animated: true)
     }

@@ -55,6 +55,11 @@
 		E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2542A73CD8200226B39 /* CustomAlertView.swift */; };
 		E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2562A73D4B600226B39 /* SetupAtributes.swift */; };
 		E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = E758A2592A73D7BC00226B39 /* SwiftEntryKit */; };
+		E77BF0102A825CBA0032D5D7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77BF00F2A825CBA0032D5D7 /* RegistrationViewController.swift */; };
+		E77BF0132A826FDA0032D5D7 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = E77BF0122A826FDA0032D5D7 /* FirebaseAppCheck */; };
+		E77BF0152A826FDA0032D5D7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E77BF0142A826FDA0032D5D7 /* FirebaseAuth */; };
+		E77BF0172A826FDA0032D5D7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E77BF0162A826FDA0032D5D7 /* FirebaseFirestore */; };
+		E77BF0192A826FDA0032D5D7 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E77BF0182A826FDA0032D5D7 /* FirebaseFirestoreSwift */; };
 		E78F689C2A73DD7C00A38393 /* ErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */; };
 		E78F689F2A74069A00A38393 /* AudioStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F689E2A74069A00A38393 /* AudioStruct.swift */; };
 		E78F68AB2A74098300A38393 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */; };
@@ -64,6 +69,11 @@
 		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
 		E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */; };
 		E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */; };
+		E7D77E622A80E4B500BD852E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D77E612A80E4B500BD852E /* GoogleService-Info.plist */; };
+		E7D77E6B2A80F41800BD852E /* NamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E6A2A80F41800BD852E /* NamesTableViewCell.swift */; };
+		E7D77E6D2A810AA600BD852E /* SetupAtributesForRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E6C2A810AA600BD852E /* SetupAtributesForRegistration.swift */; };
+		E7D77E712A810CA700BD852E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E702A810CA700BD852E /* UserService.swift */; };
+		E7D77E742A810DFA00BD852E /* CheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E732A810DFA00BD852E /* CheckerService.swift */; };
 		E7D831A12A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319C2A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 */; };
 		E7D831A22A750B0B0062D3B6 /* Death Grips - Beware.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319D2A750B0B0062D3B6 /* Death Grips - Beware.mp3 */; };
 		E7D831A32A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319E2A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */; };
@@ -160,6 +170,7 @@
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
 		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		E758A2562A73D4B600226B39 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
+		E77BF00F2A825CBA0032D5D7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 		E78F689E2A74069A00A38393 /* AudioStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStruct.swift; sourceTree = "<group>"; };
 		E78F68AA2A74098200A38393 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +180,11 @@
 		E7B46C6A2A6162890092A709 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
+		E7D77E612A80E4B500BD852E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7D77E6A2A80F41800BD852E /* NamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesTableViewCell.swift; sourceTree = "<group>"; };
+		E7D77E6C2A810AA600BD852E /* SetupAtributesForRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributesForRegistration.swift; sourceTree = "<group>"; };
+		E7D77E702A810CA700BD852E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E7D77E732A810DFA00BD852E /* CheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerService.swift; sourceTree = "<group>"; };
 		E7D8319C2A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sufjan Stevens - I Walked.mp3"; sourceTree = "<group>"; };
 		E7D8319D2A750B0B0062D3B6 /* Death Grips - Beware.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Death Grips - Beware.mp3"; sourceTree = "<group>"; };
 		E7D8319E2A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Joy Wants Eternity - From Embrace To Embrace.mp3"; sourceTree = "<group>"; };
@@ -182,9 +198,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E77BF0132A826FDA0032D5D7 /* FirebaseAppCheck in Frameworks */,
+				E77BF0152A826FDA0032D5D7 /* FirebaseAuth in Frameworks */,
 				E73DD4DA2A53E96D0015ED0B /* StorageService.framework in Frameworks */,
+				E77BF0192A826FDA0032D5D7 /* FirebaseFirestoreSwift in Frameworks */,
 				E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */,
 				E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */,
+				E77BF0172A826FDA0032D5D7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +237,7 @@
 			children = (
 				BC683E3428C36540002DD0FE /* Naigation_HW */,
 				E74399CB2A556BC800280019 /* Users */,
+				E7D77E722A810DE300BD852E /* CheckerService */,
 				E74399D42A559BE100280019 /* Checker Singlton */,
 				E74399D82A559D0400280019 /* Delegate */,
 				E7CEB4D52A56D9A5000D5410 /* LoginFactory */,
@@ -240,12 +261,14 @@
 			isa = PBXGroup;
 			children = (
 				BC683E4328C36542002DD0FE /* Info.plist */,
+				E7D77E612A80E4B500BD852E /* GoogleService-Info.plist */,
 				BC683E3E28C36542002DD0FE /* Assets.xcassets */,
 				BC683E4028C36542002DD0FE /* LaunchScreen.storyboard */,
 				BC683E3528C36540002DD0FE /* AppDelegate.swift */,
 				BC683E3728C36540002DD0FE /* SceneDelegate.swift */,
-				BC683E6928C36768002DD0FE /* PostViewController.swift */,
 				BC683E6B28C36776002DD0FE /* PostBarController.swift */,
+				BC683E6928C36768002DD0FE /* PostViewController.swift */,
+				E77BF00F2A825CBA0032D5D7 /* RegistrationViewController.swift */,
 				E74468E52A7692C000C46BBC /* Info */,
 				E74468E02A76714200C46BBC /* NetworkManager */,
 				E78F689D2A74067F00A38393 /* Audio */,
@@ -255,6 +278,7 @@
 				E7A7919A2A60016400D56CEB /* PhotoView */,
 				E7A7919B2A60017700D56CEB /* LoginView */,
 				E79D8A322A5C05BA000003DD /* Customs */,
+				E758A2532A73CD6A00226B39 /* Alerts */,
 				BC683E7028C368B6002DD0FE /* Profile */,
 			);
 			path = Naigation_HW;
@@ -263,7 +287,6 @@
 		BC683E7028C368B6002DD0FE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				E758A2532A73CD6A00226B39 /* Alerts */,
 				BC683E6728C366EC002DD0FE /* ProfileViewController.swift */,
 				BC683E7128C369AF002DD0FE /* ProfileHeaderView.swift */,
 				BC87040728DF19EE00DFC66C /* PostTableViewCell.swift */,
@@ -313,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				E74399CC2A556BE200280019 /* User.swift */,
+				E7D77E702A810CA700BD852E /* UserService.swift */,
 				E74399D22A55706D00280019 /* UserServiceProtocol.swift */,
 			);
 			path = Users;
@@ -350,6 +374,7 @@
 			children = (
 				E74468E62A7692D700C46BBC /* DateConfig.swift */,
 				BC683E6D28C367C8002DD0FE /* InfoViewController.swift */,
+				E7D77E6A2A80F41800BD852E /* NamesTableViewCell.swift */,
 				E74468E82A76972700C46BBC /* PlanetDateConfig.swift */,
 			);
 			path = Info;
@@ -360,6 +385,7 @@
 			children = (
 				E758A2542A73CD8200226B39 /* CustomAlertView.swift */,
 				E758A2562A73D4B600226B39 /* SetupAtributes.swift */,
+				E7D77E6C2A810AA600BD852E /* SetupAtributesForRegistration.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -444,6 +470,14 @@
 			path = LoginFactory;
 			sourceTree = "<group>";
 		};
+		E7D77E722A810DE300BD852E /* CheckerService */ = {
+			isa = PBXGroup;
+			children = (
+				E7D77E732A810DFA00BD852E /* CheckerService.swift */,
+			);
+			path = CheckerService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -476,6 +510,10 @@
 			packageProductDependencies = (
 				E75342C12A570441007148F0 /* iOSIntPackage */,
 				E758A2592A73D7BC00226B39 /* SwiftEntryKit */,
+				E77BF0122A826FDA0032D5D7 /* FirebaseAppCheck */,
+				E77BF0142A826FDA0032D5D7 /* FirebaseAuth */,
+				E77BF0162A826FDA0032D5D7 /* FirebaseFirestore */,
+				E77BF0182A826FDA0032D5D7 /* FirebaseFirestoreSwift */,
 			);
 			productName = Naigation_HW;
 			productReference = BC683E3228C36540002DD0FE /* Naigation_HW.app */;
@@ -573,6 +611,7 @@
 			packageReferences = (
 				E75342C02A570441007148F0 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
 				E758A2582A73D7BC00226B39 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+				E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BC683E3328C36540002DD0FE /* Products */;
 			projectDirPath = "";
@@ -592,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D831A22A750B0B0062D3B6 /* Death Grips - Beware.mp3 in Resources */,
+				E7D77E622A80E4B500BD852E /* GoogleService-Info.plist in Resources */,
 				E7D831A12A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 in Resources */,
 				E7D831A32A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */,
 				BC683E4228C36542002DD0FE /* LaunchScreen.storyboard in Resources */,
@@ -631,6 +671,7 @@
 			files = (
 				E74468E22A76716C00C46BBC /* NetworkManager.swift in Sources */,
 				E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */,
+				E7D77E6D2A810AA600BD852E /* SetupAtributesForRegistration.swift in Sources */,
 				E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */,
 				BC683E6A28C36769002DD0FE /* PostViewController.swift in Sources */,
 				E708F0E22A5325C1009F42CA /* PostCollection.swift in Sources */,
@@ -640,6 +681,7 @@
 				E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */,
 				BCAAA1812902FE470026605C /* PhotoCollectionViewCell.swift in Sources */,
 				E7188BA82A6BFFFD00CFCB78 /* PostCoordinator.swift in Sources */,
+				E77BF0102A825CBA0032D5D7 /* RegistrationViewController.swift in Sources */,
 				E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */,
 				BC683E7428C36A75002DD0FE /* Profile.swift in Sources */,
 				E7188BA22A6BFC6D00CFCB78 /* FeedCoordinator.swift in Sources */,
@@ -651,14 +693,17 @@
 				E78F689C2A73DD7C00A38393 /* ErrorEnum.swift in Sources */,
 				E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */,
 				BC683E6828C366EC002DD0FE /* ProfileViewController.swift in Sources */,
+				E7D77E6B2A80F41800BD852E /* NamesTableViewCell.swift in Sources */,
 				E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */,
 				BC683E7228C369AF002DD0FE /* ProfileHeaderView.swift in Sources */,
 				E7188B9E2A6BFAEE00CFCB78 /* AppCoorditaor.swift in Sources */,
+				E7D77E742A810DFA00BD852E /* CheckerService.swift in Sources */,
 				BC683E6C28C36776002DD0FE /* PostBarController.swift in Sources */,
 				E7188B9C2A6BF93900CFCB78 /* Coordinator.swift in Sources */,
 				E7188BA42A6BFD9500CFCB78 /* InfoCoordinate.swift in Sources */,
 				E708F0E42A5325CA009F42CA /* PhotosCollection.swift in Sources */,
 				BC683E6628C366D9002DD0FE /* FeedViewController.swift in Sources */,
+				E7D77E712A810CA700BD852E /* UserService.swift in Sources */,
 				E74399D32A55706D00280019 /* UserServiceProtocol.swift in Sources */,
 				BCB07C472901995300C6D752 /* PhotosTableViewCell.swift in Sources */,
 				E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */,
@@ -1121,6 +1166,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1133,6 +1186,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E758A2582A73D7BC00226B39 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
 			productName = SwiftEntryKit;
+		};
+		E77BF0122A826FDA0032D5D7 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		E77BF0142A826FDA0032D5D7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E77BF0162A826FDA0032D5D7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E77BF0182A826FDA0032D5D7 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

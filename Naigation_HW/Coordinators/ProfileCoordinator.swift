@@ -17,7 +17,7 @@ class ProfileCoordinator: Coordinator {
     }
     
     func start() {
-        let user = User(logIn: "adham", name: "adham", image: UIImage(named: "image3")!, status: "active")
+        let user = User(email: "", password: "", name: "", image: UIImage(named: "image3")!, status: "")
         
         let profileViewController = ProfileViewController(user: user)
         profileViewController.coordinator = self

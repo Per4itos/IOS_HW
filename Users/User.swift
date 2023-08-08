@@ -9,16 +9,20 @@ import UIKit
 
 class User {
     
-    var logIn: String
+    var email: String
+    var password: String
+//    var logIn: String
     var name: String
     var image: UIImage
     var status: String
     
-    init(logIn: String, name: String, image: UIImage, status: String) {
-        self.logIn = logIn
+   init(email: String, password: String, name: String, image: UIImage, status: String) {
+        self.email = email
+        self.password = password
         self.name = name
         self.image = image
         self.status = status
+   
     }
 }
 

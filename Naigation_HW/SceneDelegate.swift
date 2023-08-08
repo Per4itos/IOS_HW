@@ -21,9 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appCoordinator = AppCoordinator(window: window!)
         appCoordinator?.start()
         
-        let factory = MyLoginFactoryStruct()
-        let loginInsectr = factory.makeLoginInspector()
-        let logInViewController = UINavigationController(rootViewController: LogInViewController(loginInspectr: loginInsectr))
+        _ = MyLoginFactoryStruct()
+        let logInViewController = UINavigationController(rootViewController: LogInViewController())
         
         self.window?.rootViewController = logInViewController
         self.window?.makeKeyAndVisible()

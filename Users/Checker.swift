@@ -9,23 +9,22 @@ import UIKit
 
 final class Checker  {
     
-    var login = "n"
-    var password = "1"
+    var login = ""
+    var password = ""
     
     static let shared = Checker()
     
     private init() {}
     
-    func check(log: String, pass: String) -> Result<Bool, NetworkError> {
-        
-        if log == login && pass == password {
-            return .success(true)
-        }else{
-            return .failure(NetworkError.incorrectDate)
-        }
+//    func check(log: String, pass: String) -> Result<Bool, NetworkError> {
+//
+//        if log == login && pass == password {
+//            return .success(true)
+//        }else{
+//            return .failure(NetworkError.incorrectDate)
+//        }
     }
     
    
     
-}
 

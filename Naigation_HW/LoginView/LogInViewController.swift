@@ -6,24 +6,27 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
+import SwiftEntryKit
 
 final class LogInViewController: UIViewController {
     
     var coordinator: LoginCoordinator?
     
-    var loginInspectr: LoginInspector
+//    var loginInspectr: LoginInspector
+//
+//    init(loginInspectr: LoginInspector) {
+//
+//        self.loginInspectr = loginInspectr
+//
+//        super.init(nibName: nil, bundle: nil)
+//    }
     
-    init(loginInspectr: LoginInspector) {
-        
-        self.loginInspectr = loginInspectr
-        
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     var user: User?
     
@@ -78,7 +81,7 @@ final class LogInViewController: UIViewController {
     private lazy var logInTextField: UITextField = {
         let logInText = UITextField()
         
-        logInText.text = Checker.shared.login
+//        logInText.text = Checker.shared.login
         logInText.placeholder = "Email or phone"
         logInText.textColor = .black
         logInText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -94,7 +97,7 @@ final class LogInViewController: UIViewController {
     private lazy var passwordTextField: UITextField = {
         let passwordText = UITextField()
         
-        passwordText.text = Checker.shared.password
+//        passwordText.text = Checker.shared.password
         passwordText.placeholder = "Password"
         passwordText.textColor = .black
         passwordText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -235,55 +238,75 @@ final class LogInViewController: UIViewController {
         self.scroleView.setContentOffset(.zero, animated: true)
     }
     
-    @objc private func buttonAction2() {
+    
+    private func registrationAllert() {
         
-        if loginInspectr.check(log: logInTextField.text!, pass: passwordTextField.text!) == .success(true) {
-            let user = User(logIn: "adham", name: "adham", image: UIImage(named: "image3")!, status: "active")
-            
-            let tabBarController = UITabBarController()
-            
-            let feedViewController = UINavigationController(rootViewController: FeedViewController(loginInspectr: loginInspectr))
-            let profaileViewControler = UINavigationController(rootViewController: ProfileViewController(user: user))
-            
-            tabBarController.viewControllers = [
-                profaileViewControler,
-                feedViewController
-            ]
-            
-            tabBarController.viewControllers?.enumerated().forEach {
-                $1.tabBarItem.title = $0 == 0 ? "Profile" : "Feed"
-                $1.tabBarItem.image = $0 == 0
-                ? UIImage(systemName: "person.icloud")
-                : UIImage(systemName: "text.justify")
-            }
-            
-            let keyWindow = UIApplication
-                .shared
-                .connectedScenes
-                .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
-                .last { $0.isKeyWindow }
-            
-            guard let window = keyWindow else {
-                return
-            }
-            
-            window.rootViewController = tabBarController
-            
-            UIView.transition(with: window,
-                              duration: 0.3,
-                              options: .transitionCrossDissolve,
-                              animations: nil,
-                              completion: nil)
-            
-        }else {
-            print ("Не правильно введен логин или пароль")
-            
-            let alert = UIAlertController(title: "Incorrect login", message: "Please, enter correct login", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Close", style: .cancel))
-            self.present(alert, animated: true)
-        }
+        let vc = RegistrationViewController()
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true)
         
     }
+    
+    @objc private func buttonAction2() {
+        
+        let checkerService = CheckerService()
+       
+        checkerService.checkCredentials(for: logInTextField.text!, and: passwordTextField.text!) { result in
+            switch result {
+            case .success(let user):
+                
+                let tabBarController = UITabBarController()
+                
+                let feedViewController = UINavigationController(rootViewController: FeedViewController())
+                let profaileViewControler = UINavigationController(rootViewController: ProfileViewController(user: user))
+                
+                tabBarController.viewControllers = [
+                    profaileViewControler,
+                    feedViewController
+                ]
+                
+                tabBarController.viewControllers?.enumerated().forEach {
+                    $1.tabBarItem.title = $0 == 0 ? "Profile" : "Feed"
+                    $1.tabBarItem.image = $0 == 0
+                    ? UIImage(systemName: "person.icloud")
+                    : UIImage(systemName: "text.justify")
+                }
+                
+                let keyWindow = UIApplication
+                    .shared
+                    .connectedScenes
+                    .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                    .last { $0.isKeyWindow }
+                
+                guard let window = keyWindow else {
+                    return
+                }
+                
+                window.rootViewController = tabBarController
+                
+                UIView.transition(with: window,
+                                  duration: 0.3,
+                                  options: .transitionCrossDissolve,
+                                  animations: nil,
+                                  completion: nil)
+                
+                
+            case .failure(let error):
+                let alert = UIAlertController(title: "User not found!", message: "Please, registre a new account", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+                
+                let signUp = UIAlertAction(title: "Sign up", style: .default) { [weak self] _ in
+                    
+                    self?.registrationAllert()
+                }
+                alert.addAction(signUp)
+                self.present(alert, animated: true)
+                print("Error of date \(error)")
+            }
+            
+        }
+    }
+      
     
     @objc private func generateButtonAction() {
         

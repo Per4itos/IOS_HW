@@ -19,7 +19,7 @@ class LoginCoordinator: Coordinator, StartFlow {
     }
     
     func start() {
-        let loginViewController = LogInViewController(loginInspectr: LoginInspector())
+        let loginViewController = LogInViewController()
         loginViewController.coordinator = self
         navigationController.pushViewController(loginViewController, animated: true)
     }
