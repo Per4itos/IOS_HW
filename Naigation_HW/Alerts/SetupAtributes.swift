@@ -2,7 +2,7 @@
 //  SetupAtributes.swift
 //  Naigation_HW
 //
-//  Created by Адхам Тангиров on 28.07.2023.
+//  Created by Адхам Тангиров on 09.08.2023.
 //
 
 import UIKit
@@ -27,7 +27,7 @@ func setupAttributes() -> EKAttributes {
         swipeable: true,
         pullbackAnimation: .jolt
     )
-
+    
     attributes.entranceAnimation = .init(
         translate: .init(
             duration: 0.7,
@@ -40,7 +40,7 @@ func setupAttributes() -> EKAttributes {
             spring: .init(damping: 1, initialVelocity: 0)
         )
     )
-
+    
     attributes.exitAnimation = .init(
         translate: .init(duration: 0.2)
     )

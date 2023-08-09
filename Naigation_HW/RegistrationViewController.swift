@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegistrationViewController: UIViewController {
     
@@ -20,13 +21,30 @@ class RegistrationViewController: UIViewController {
     
     private lazy var loginTextField: UITextField = {
         let loginTextField = UITextField()
+        loginTextField.placeholder = "Email or phone"
+        loginTextField.textColor = .black
+        loginTextField.font = .systemFont(ofSize: 16, weight: .regular)
+        loginTextField.autocapitalizationType = .none
+        loginTextField.backgroundColor = .systemGray6
+        loginTextField.tintColor = .darkGray
+        loginTextField.borderStyle = .roundedRect
         loginTextField.translatesAutoresizingMaskIntoConstraints = false
+        
         return loginTextField
     }()
     
     private lazy var passwordtextField: UITextField = {
         let passwordtextField = UITextField()
+        passwordtextField.placeholder = "Password"
+        passwordtextField.textColor = .black
+        passwordtextField.font = .systemFont(ofSize: 16, weight: .regular)
+        passwordtextField.autocapitalizationType = .none
+        passwordtextField.isSecureTextEntry = false
+        passwordtextField.backgroundColor = .systemGray6
+        passwordtextField.tintColor = .darkGray
+        passwordtextField.borderStyle = .roundedRect
         passwordtextField.translatesAutoresizingMaskIntoConstraints = false
+        
 
         return passwordtextField
     }()
@@ -36,7 +54,7 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .systemMint
         
         setupView()
       

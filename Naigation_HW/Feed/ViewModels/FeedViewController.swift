@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class FeedViewController: UIViewController {
     
@@ -116,6 +117,9 @@ class FeedViewController: UIViewController {
     }
     
     @objc private func logOut() {
+        
+       try? Auth.auth().signOut()
+        
         let keyWindow = UIApplication
             .shared
             .connectedScenes

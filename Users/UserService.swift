@@ -5,8 +5,7 @@
 //  Created by Адхам Тангиров on 07.08.2023.
 //
 
-import Foundation
-
+import UIKit
 protocol UserServiceProtocol {
 
      func checkService(email: String) -> User?

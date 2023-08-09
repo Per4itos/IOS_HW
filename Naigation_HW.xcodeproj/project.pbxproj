@@ -42,7 +42,6 @@
 		E73DD4E02A53E9720015ED0B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDFB08428DDE3DB00D283B8 /* Post.swift */; };
 		E73DD4E72A53EDD70015ED0B /* PostHEaderCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DD4E62A53EDD70015ED0B /* PostHEaderCollection.swift */; };
 		E74399CD2A556BE200280019 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399CC2A556BE200280019 /* User.swift */; };
-		E74399D32A55706D00280019 /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D22A55706D00280019 /* UserServiceProtocol.swift */; };
 		E74399D72A559C2C00280019 /* Checker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D62A559C2C00280019 /* Checker.swift */; };
 		E74399DA2A559D2700280019 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */; };
 		E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74399DB2A55BBDE00280019 /* LoginInspector.swift */; };
@@ -53,7 +52,6 @@
 		E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = E75342C12A570441007148F0 /* iOSIntPackage */; };
 		E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */; };
 		E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2542A73CD8200226B39 /* CustomAlertView.swift */; };
-		E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2562A73D4B600226B39 /* SetupAtributes.swift */; };
 		E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = E758A2592A73D7BC00226B39 /* SwiftEntryKit */; };
 		E77BF0102A825CBA0032D5D7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77BF00F2A825CBA0032D5D7 /* RegistrationViewController.swift */; };
 		E77BF0132A826FDA0032D5D7 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = E77BF0122A826FDA0032D5D7 /* FirebaseAppCheck */; };
@@ -71,7 +69,6 @@
 		E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */; };
 		E7D77E622A80E4B500BD852E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D77E612A80E4B500BD852E /* GoogleService-Info.plist */; };
 		E7D77E6B2A80F41800BD852E /* NamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E6A2A80F41800BD852E /* NamesTableViewCell.swift */; };
-		E7D77E6D2A810AA600BD852E /* SetupAtributesForRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E6C2A810AA600BD852E /* SetupAtributesForRegistration.swift */; };
 		E7D77E712A810CA700BD852E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E702A810CA700BD852E /* UserService.swift */; };
 		E7D77E742A810DFA00BD852E /* CheckerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D77E732A810DFA00BD852E /* CheckerService.swift */; };
 		E7D831A12A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319C2A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 */; };
@@ -79,6 +76,7 @@
 		E7D831A32A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319E2A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */; };
 		E7D831A42A750B0B0062D3B6 /* Nils Frahm - You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D8319F2A750B0B0062D3B6 /* Nils Frahm - You.mp3 */; };
 		E7D831A52A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7D831A02A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */; };
+		E7DF62492A8351C600919A18 /* SetupAtributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF62482A8351C600919A18 /* SetupAtributes.swift */; };
 		E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FDB3F92A6EA0E50068868D /* BruteForce.swift */; };
 /* End PBXBuildFile section */
 
@@ -159,7 +157,6 @@
 		E73DD4D52A53E96D0015ED0B /* StorageService.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StorageService.docc; sourceTree = "<group>"; };
 		E73DD4E62A53EDD70015ED0B /* PostHEaderCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHEaderCollection.swift; sourceTree = "<group>"; };
 		E74399CC2A556BE200280019 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E74399D22A55706D00280019 /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		E74399D62A559C2C00280019 /* Checker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checker.swift; sourceTree = "<group>"; };
 		E74399D92A559D2700280019 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E74399DB2A55BBDE00280019 /* LoginInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInspector.swift; sourceTree = "<group>"; };
@@ -169,7 +166,6 @@
 		E74468E82A76972700C46BBC /* PlanetDateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDateConfig.swift; sourceTree = "<group>"; };
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
 		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
-		E758A2562A73D4B600226B39 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
 		E77BF00F2A825CBA0032D5D7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 		E78F689E2A74069A00A38393 /* AudioStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStruct.swift; sourceTree = "<group>"; };
@@ -182,7 +178,6 @@
 		E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLoginFactory.swift; sourceTree = "<group>"; };
 		E7D77E612A80E4B500BD852E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7D77E6A2A80F41800BD852E /* NamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesTableViewCell.swift; sourceTree = "<group>"; };
-		E7D77E6C2A810AA600BD852E /* SetupAtributesForRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributesForRegistration.swift; sourceTree = "<group>"; };
 		E7D77E702A810CA700BD852E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E7D77E732A810DFA00BD852E /* CheckerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckerService.swift; sourceTree = "<group>"; };
 		E7D8319C2A750B0B0062D3B6 /* Sufjan Stevens - I Walked.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sufjan Stevens - I Walked.mp3"; sourceTree = "<group>"; };
@@ -190,6 +185,7 @@
 		E7D8319E2A750B0B0062D3B6 /* Joy Wants Eternity - From Embrace To Embrace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Joy Wants Eternity - From Embrace To Embrace.mp3"; sourceTree = "<group>"; };
 		E7D8319F2A750B0B0062D3B6 /* Nils Frahm - You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nils Frahm - You.mp3"; sourceTree = "<group>"; };
 		E7D831A02A750B0B0062D3B6 /* Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sleepmakeswaves - It's Dark, It's Cold, It's Winter.mp3"; sourceTree = "<group>"; };
+		E7DF62482A8351C600919A18 /* SetupAtributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAtributes.swift; sourceTree = "<group>"; };
 		E7FDB3F92A6EA0E50068868D /* BruteForce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BruteForce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,7 +333,6 @@
 			children = (
 				E74399CC2A556BE200280019 /* User.swift */,
 				E7D77E702A810CA700BD852E /* UserService.swift */,
-				E74399D22A55706D00280019 /* UserServiceProtocol.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -384,8 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				E758A2542A73CD8200226B39 /* CustomAlertView.swift */,
-				E758A2562A73D4B600226B39 /* SetupAtributes.swift */,
-				E7D77E6C2A810AA600BD852E /* SetupAtributesForRegistration.swift */,
+				E7DF62482A8351C600919A18 /* SetupAtributes.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -671,7 +665,6 @@
 			files = (
 				E74468E22A76716C00C46BBC /* NetworkManager.swift in Sources */,
 				E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */,
-				E7D77E6D2A810AA600BD852E /* SetupAtributesForRegistration.swift in Sources */,
 				E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */,
 				BC683E6A28C36769002DD0FE /* PostViewController.swift in Sources */,
 				E708F0E22A5325C1009F42CA /* PostCollection.swift in Sources */,
@@ -686,6 +679,7 @@
 				BC683E7428C36A75002DD0FE /* Profile.swift in Sources */,
 				E7188BA22A6BFC6D00CFCB78 /* FeedCoordinator.swift in Sources */,
 				BC87040828DF19EF00DFC66C /* PostTableViewCell.swift in Sources */,
+				E7DF62492A8351C600919A18 /* SetupAtributes.swift in Sources */,
 				E7188BAC2A6C01D700CFCB78 /* AppTabBarCoordinator.swift in Sources */,
 				E74468E72A7692D700C46BBC /* DateConfig.swift in Sources */,
 				BC683E3628C36540002DD0FE /* AppDelegate.swift in Sources */,
@@ -694,7 +688,6 @@
 				E7FDB3FA2A6EA0E50068868D /* BruteForce.swift in Sources */,
 				BC683E6828C366EC002DD0FE /* ProfileViewController.swift in Sources */,
 				E7D77E6B2A80F41800BD852E /* NamesTableViewCell.swift in Sources */,
-				E758A2572A73D4B600226B39 /* SetupAtributes.swift in Sources */,
 				BC683E7228C369AF002DD0FE /* ProfileHeaderView.swift in Sources */,
 				E7188B9E2A6BFAEE00CFCB78 /* AppCoorditaor.swift in Sources */,
 				E7D77E742A810DFA00BD852E /* CheckerService.swift in Sources */,
@@ -704,7 +697,6 @@
 				E708F0E42A5325CA009F42CA /* PhotosCollection.swift in Sources */,
 				BC683E6628C366D9002DD0FE /* FeedViewController.swift in Sources */,
 				E7D77E712A810CA700BD852E /* UserService.swift in Sources */,
-				E74399D32A55706D00280019 /* UserServiceProtocol.swift in Sources */,
 				BCB07C472901995300C6D752 /* PhotosTableViewCell.swift in Sources */,
 				E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */,
 				E78F689F2A74069A00A38393 /* AudioStruct.swift in Sources */,
@@ -903,13 +895,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X5WGN6BU5T;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Naigation_HW/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -931,13 +924,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X5WGN6BU5T;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Naigation_HW/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -301,7 +301,7 @@ final class LogInViewController: UIViewController {
                 }
                 alert.addAction(signUp)
                 self.present(alert, animated: true)
-                print("Error of date \(error)")
+                print(error)
             }
             
         }

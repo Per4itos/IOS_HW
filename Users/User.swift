@@ -11,7 +11,6 @@ class User {
     
     var email: String
     var password: String
-//    var logIn: String
     var name: String
     var image: UIImage
     var status: String
