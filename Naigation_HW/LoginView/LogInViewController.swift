@@ -14,19 +14,19 @@ final class LogInViewController: UIViewController {
     
     var coordinator: LoginCoordinator?
     
-//    var loginInspectr: LoginInspector
-//
-//    init(loginInspectr: LoginInspector) {
-//
-//        self.loginInspectr = loginInspectr
-//
-//        super.init(nibName: nil, bundle: nil)
-//    }
+    //    var loginInspectr: LoginInspector
+    //
+    //    init(loginInspectr: LoginInspector) {
+    //
+    //        self.loginInspectr = loginInspectr
+    //
+    //        super.init(nibName: nil, bundle: nil)
+    //    }
     
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    //
+    //    required init?(coder: NSCoder) {
+    //        fatalError("init(coder:) has not been implemented")
+    //    }
     
     var user: User?
     
@@ -40,6 +40,9 @@ final class LogInViewController: UIViewController {
     
     private lazy var createPasswordButton = CustomButton(title: "сгенерируйте пароль", titleColor: .gray, buttonColor: .blue, buttonCornRadius: 10, shadow: false, tapAction: {
         self.generateButtonAction()})
+    
+    
+    private lazy var signUPButton = CustomButton(title: "Sign up", titleColor: .white, buttonColor: .systemBlue, buttonCornRadius: 10, shadow: false, tapAction: signUpAction)
     
     
     private lazy var activityInticator: UIActivityIndicatorView = {
@@ -81,7 +84,7 @@ final class LogInViewController: UIViewController {
     private lazy var logInTextField: UITextField = {
         let logInText = UITextField()
         
-//        logInText.text = Checker.shared.login
+        //        logInText.text = Checker.shared.login
         logInText.placeholder = "Email or phone"
         logInText.textColor = .black
         logInText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -97,7 +100,7 @@ final class LogInViewController: UIViewController {
     private lazy var passwordTextField: UITextField = {
         let passwordText = UITextField()
         
-//        passwordText.text = Checker.shared.password
+        //        passwordText.text = Checker.shared.password
         passwordText.placeholder = "Password"
         passwordText.textColor = .black
         passwordText.font = .systemFont(ofSize: 16, weight: .regular)
@@ -133,24 +136,6 @@ final class LogInViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.didShowKeyboard(_:)),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(self.didHideKeyboard(_:)),
-                                               name: UIResponder.keyboardDidHideNotification,
-                                               object: nil)
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.logInTextField.becomeFirstResponder()
-    }
-    
     private func setUpViews() {
         view.backgroundColor = .systemBackground
         self.view.addSubview(self.scroleView)
@@ -161,6 +146,7 @@ final class LogInViewController: UIViewController {
         self.textStackView.addSubview(self.passwordTextField)
         self.scroleView.addSubview(self.createPasswordButton)
         self.scroleView.addSubview(self.activityInticator)
+        self.scroleView.addSubview(self.signUPButton)
         
         
         NSLayoutConstraint.activate([
@@ -201,12 +187,37 @@ final class LogInViewController: UIViewController {
             self.activityInticator.bottomAnchor.constraint(equalTo: self.textStackView.topAnchor, constant: -20),
             self.activityInticator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             
-            self.createPasswordButton.topAnchor.constraint(equalTo: self.logInButton.bottomAnchor, constant: 16),
+            self.signUPButton.topAnchor.constraint(equalTo: self.logInButton.bottomAnchor, constant: 16),
+            self.signUPButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16),
+            self.signUPButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -16),
+            self.signUPButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            
+            self.createPasswordButton.topAnchor.constraint(equalTo: self.signUPButton.bottomAnchor, constant: 16),
             self.createPasswordButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16),
             self.createPasswordButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -16),
             self.createPasswordButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.didShowKeyboard(_:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.didHideKeyboard(_:)),
+                                               name: UIResponder.keyboardDidHideNotification,
+                                               object: nil)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.logInTextField.becomeFirstResponder()
+    }
+    
     
     private func setupGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -247,83 +258,105 @@ final class LogInViewController: UIViewController {
         
     }
     
+    @objc private func signUpAction() {
+        
+        let signUpAction = RegistrationViewController()
+        self.navigationController?.pushViewController(signUpAction, animated: true)
+        
+        
+    }
+    
     @objc private func buttonAction2() {
         
         let checkerService = CheckerService()
-       
+        
         checkerService.checkCredentials(for: logInTextField.text!, and: passwordTextField.text!) { result in
             switch result {
             case .success(let user):
-                
-                let tabBarController = UITabBarController()
-                
-                let feedViewController = UINavigationController(rootViewController: FeedViewController())
-                let profaileViewControler = UINavigationController(rootViewController: ProfileViewController(user: user))
-                
-                tabBarController.viewControllers = [
-                    profaileViewControler,
-                    feedViewController
-                ]
-                
-                tabBarController.viewControllers?.enumerated().forEach {
-                    $1.tabBarItem.title = $0 == 0 ? "Profile" : "Feed"
-                    $1.tabBarItem.image = $0 == 0
-                    ? UIImage(systemName: "person.icloud")
-                    : UIImage(systemName: "text.justify")
-                }
-                
-                let keyWindow = UIApplication
-                    .shared
-                    .connectedScenes
-                    .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
-                    .last { $0.isKeyWindow }
-                
-                guard let window = keyWindow else {
-                    return
-                }
-                
-                window.rootViewController = tabBarController
-                
-                UIView.transition(with: window,
-                                  duration: 0.3,
-                                  options: .transitionCrossDissolve,
-                                  animations: nil,
-                                  completion: nil)
-                
-                
-            case .failure(let error):
-                let alert = UIAlertController(title: "User not found!", message: "Please, registre a new account", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Close", style: .cancel))
-                
-                let signUp = UIAlertAction(title: "Sign up", style: .default) { [weak self] _ in
                     
-                    self?.registrationAllert()
+                                    let tabBarController = UITabBarController()
+                    
+                                    let feedViewController = UINavigationController(rootViewController: FeedViewController())
+                                    let profaileViewControler = UINavigationController(rootViewController: ProfileViewController(user: user))
+                    
+                                    tabBarController.viewControllers = [
+                                        profaileViewControler,
+                                        feedViewController
+                                    ]
+                    
+                                    tabBarController.viewControllers?.enumerated().forEach {
+                                        $1.tabBarItem.title = $0 == 0 ? "Profile" : "Feed"
+                                        $1.tabBarItem.image = $0 == 0
+                                        ? UIImage(systemName: "person.icloud")
+                                        : UIImage(systemName: "text.justify")
+                                    }
+                    
+                                    let keyWindow = UIApplication
+                                        .shared
+                                        .connectedScenes
+                                        .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                                        .last { $0.isKeyWindow }
+                    
+                                    guard let window = keyWindow else {
+                                        return
+                                    }
+                    
+                                    window.rootViewController = tabBarController
+                    
+                                    UIView.transition(with: window,
+                                                      duration: 0.3,
+                                                      options: .transitionCrossDissolve,
+                                                      animations: nil,
+                                                      completion: nil)
+                                    SwiftEntryKit.dismiss()
+                    
+                case .failure(let error):
+                    let checkerService = CheckerService()
+                    checkerService.signUp(for: self.logInTextField.text!, and: self.passwordTextField.text!) { result in
+                        switch result {
+                            
+                        case .success(let user):
+                            let profileViewController = ProfileViewController(user: user)
+                            self.navigationController?.pushViewController(profileViewController, animated: true)
+                        case .failure(let error):
+                            let alert = UIAlertController(title: "User not found!", message: "Please, registre a new account", preferredStyle: .alert)
+                            self.present(alert, animated: true)
+                            
+                            alert.addAction(UIAlertAction(title: "Close", style: .cancel))
+                            //
+                            //                        let signUp = UIAlertAction(title: "Sign up", style: .default) { [weak self] _ in
+                            //
+                            self.registrationAllert()
+                        }
+                        //                        alert.addAction(signUp)
+                        //                        self.present(alert, animated: true)
+                        print(error)
+                    }
+                    
                 }
-                alert.addAction(signUp)
-                self.present(alert, animated: true)
-                print(error)
             }
             
         }
-    }
-      
     
-    @objc private func generateButtonAction() {
         
-        activityInticator.startAnimating()
-        let ascChecker = Checker.shared
         
-        concurrentQueue.async { [self] in
+        @objc private func generateButtonAction() {
             
-            let generatedPassword = bruteForce.randomPass()
-            bruteForce.bruteForce(passwordToUnlock: generatedPassword)
+            activityInticator.startAnimating()
+            let ascChecker = Checker.shared
             
-            ascChecker.password = generatedPassword
-            DispatchQueue.main.async { [self] in
-                passwordTextField.text = generatedPassword
-                passwordTextField.isSecureTextEntry = false
-                activityInticator.stopAnimating()
+            concurrentQueue.async { [self] in
+                
+                let generatedPassword = bruteForce.randomPass()
+                bruteForce.bruteForce(passwordToUnlock: generatedPassword)
+                
+                ascChecker.password = generatedPassword
+                DispatchQueue.main.async { [self] in
+                    passwordTextField.text = generatedPassword
+                    passwordTextField.isSecureTextEntry = false
+                    activityInticator.stopAnimating()
+                }
             }
         }
-    }
+    
 }
