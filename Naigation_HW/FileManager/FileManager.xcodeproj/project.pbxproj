@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70DC7362A924D57009F5CAE /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E70DC7352A924D57009F5CAE /* KeychainSwift */; };
+		E70DC7392A924D91009F5CAE /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = E70DC7382A924D91009F5CAE /* KeychainAccess */; };
+		E70DC73B2A92548C009F5CAE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DC73A2A92548C009F5CAE /* SettingsViewController.swift */; };
 		E7EF74BD2A8F467800FC60D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EF74BC2A8F467800FC60D6 /* AppDelegate.swift */; };
 		E7EF74BF2A8F467800FC60D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EF74BE2A8F467800FC60D6 /* SceneDelegate.swift */; };
 		E7EF74C12A8F467800FC60D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EF74C02A8F467800FC60D6 /* ViewController.swift */; };
@@ -17,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E70DC73A2A92548C009F5CAE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E7EF74B92A8F467800FC60D6 /* FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EF74BC2A8F467800FC60D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7EF74BE2A8F467800FC60D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70DC7392A924D91009F5CAE /* KeychainAccess in Frameworks */,
+				E70DC7362A924D57009F5CAE /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 				E7EF74BE2A8F467800FC60D6 /* SceneDelegate.swift */,
 				E7EF74C02A8F467800FC60D6 /* ViewController.swift */,
 				E7EF74D02A8F479400FC60D6 /* TableViewController.swift */,
+				E70DC73A2A92548C009F5CAE /* SettingsViewController.swift */,
 				E7EF74C22A8F467800FC60D6 /* Main.storyboard */,
 				E7EF74C52A8F467A00FC60D6 /* Assets.xcassets */,
 				E7EF74C72A8F467A00FC60D6 /* LaunchScreen.storyboard */,
@@ -86,6 +93,10 @@
 			dependencies = (
 			);
 			name = FileManager;
+			packageProductDependencies = (
+				E70DC7352A924D57009F5CAE /* KeychainSwift */,
+				E70DC7382A924D91009F5CAE /* KeychainAccess */,
+			);
 			productName = FileManager;
 			productReference = E7EF74B92A8F467800FC60D6 /* FileManager.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,10 @@
 				Base,
 			);
 			mainGroup = E7EF74B02A8F467800FC60D6;
+			packageReferences = (
+				E70DC7342A924D57009F5CAE /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				E70DC7372A924D91009F5CAE /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = E7EF74BA2A8F467800FC60D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,6 +159,7 @@
 				E7EF74C12A8F467800FC60D6 /* ViewController.swift in Sources */,
 				E7EF74BD2A8F467800FC60D6 /* AppDelegate.swift in Sources */,
 				E7EF74BF2A8F467800FC60D6 /* SceneDelegate.swift in Sources */,
+				E70DC73B2A92548C009F5CAE /* SettingsViewController.swift in Sources */,
 				E7EF74D12A8F479400FC60D6 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X5WGN6BU5T;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FileManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -319,7 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X5WGN6BU5T;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FileManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -362,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E70DC7342A924D57009F5CAE /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+		E70DC7372A924D91009F5CAE /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E70DC7352A924D57009F5CAE /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E70DC7342A924D57009F5CAE /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		E70DC7382A924D91009F5CAE /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E70DC7372A924D91009F5CAE /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7EF74B12A8F467800FC60D6 /* Project object */;
 }

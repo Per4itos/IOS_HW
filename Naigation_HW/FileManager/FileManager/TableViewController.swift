@@ -7,9 +7,10 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController  {
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var tableViewDelegate: SettingsViewController?
+    
     var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     
     func checkList() {
@@ -27,55 +28,57 @@ class TableViewController: UITableViewController {
         }
     }
     
+    private func sortContent() -> [String] {
+            
+            if UserDefaults.standard.bool(forKey: "sortValues") {
+                
+                let sortedContent = content.sorted(by: {$0 < $1})
+                return sortedContent
+            } else {
+                let nonSortedContent = content
+                return nonSortedContent}
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator.isHidden = true
         
         checkList()
 
     }
 
-    @IBAction func AddNewImage(_ sender: Any) {
-        
-        activityIndicator.startAnimating()
-        activityIndicator.isHidden = false
+    
+    @IBAction func imageAction(_ sender: Any) {
         
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         present(imagePicker, animated: true)
-           
     }
+    
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return content.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let _: Void = tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        cell.textLabel?.text = content[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let sortContet = sortContent()
+
+        cell.textLabel?.text = sortContet[indexPath.row]
         cell.detailTextLabel?.text = "File"
         
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let pathForDelete = path + "/" + content[indexPath.row]
+            
+            let sortContent = sortContent()
+            let pathForDelete = path + "/" + sortContent[indexPath.row]
             try? FileManager.default.removeItem(atPath: pathForDelete)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -101,13 +104,11 @@ extension TableViewController: UIImagePickerControllerDelegate, UINavigationCont
                     try jpegData.write(to: imagePath)
                 } catch {
                     let alert = UIAlertController(title: "Error of create", message: error.localizedDescription, preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "Okay", style: .default)
+                    let alertAction = UIAlertAction(title: "Ok", style: .default)
                     alert.addAction(alertAction)
                     present(alert, animated: true)
                 }
             }
-        activityIndicator.stopAnimating()
-        activityIndicator.isHidden = true
             tableView.reloadData()
             picker.dismiss(animated: true, completion: nil)
     }
