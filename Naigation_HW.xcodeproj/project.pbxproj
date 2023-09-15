@@ -53,6 +53,10 @@
 		E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */; };
 		E758A2552A73CD8200226B39 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758A2542A73CD8200226B39 /* CustomAlertView.swift */; };
 		E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = E758A2592A73D7BC00226B39 /* SwiftEntryKit */; };
+		E759CBB52AB437CB00B3CAB1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759CBB42AB437CB00B3CAB1 /* FavoriteViewController.swift */; };
+		E759CBB72AB4386C00B3CAB1 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759CBB62AB4386C00B3CAB1 /* NewsTableViewCell.swift */; };
+		E759CBB92AB4391B00B3CAB1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759CBB82AB4391B00B3CAB1 /* CoreDataManager.swift */; };
+		E759CBBC2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E759CBBA2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodeld */; };
 		E77BF0102A825CBA0032D5D7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77BF00F2A825CBA0032D5D7 /* RegistrationViewController.swift */; };
 		E77BF0132A826FDA0032D5D7 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = E77BF0122A826FDA0032D5D7 /* FirebaseAppCheck */; };
 		E77BF0152A826FDA0032D5D7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E77BF0142A826FDA0032D5D7 /* FirebaseAuth */; };
@@ -65,6 +69,8 @@
 		E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A342A5C05FE000003DD /* CustomButton.swift */; };
 		E79D8A372A5C140A000003DD /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79D8A362A5C140A000003DD /* FeedViewModel.swift */; };
 		E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B46C6A2A6162890092A709 /* FeedModel.swift */; };
+		E7BAF30E2A949FBF00B4E60E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E7BAF30D2A949FBF00B4E60E /* Realm */; };
+		E7BAF3102A949FBF00B4E60E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E7BAF30F2A949FBF00B4E60E /* RealmSwift */; };
 		E7CEB4D72A56D9C0000D5410 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D62A56D9C0000D5410 /* LoginFactory.swift */; };
 		E7CEB4D92A56DA88000D5410 /* MyLoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CEB4D82A56DA88000D5410 /* MyLoginFactory.swift */; };
 		E7D77E622A80E4B500BD852E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7D77E612A80E4B500BD852E /* GoogleService-Info.plist */; };
@@ -166,6 +172,10 @@
 		E74468E82A76972700C46BBC /* PlanetDateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDateConfig.swift; sourceTree = "<group>"; };
 		E75342C52A57DEF4007148F0 /* PhotosCollectionFiltre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionFiltre.swift; sourceTree = "<group>"; };
 		E758A2542A73CD8200226B39 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		E759CBB42AB437CB00B3CAB1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		E759CBB62AB4386C00B3CAB1 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		E759CBB82AB4391B00B3CAB1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E759CBBB2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteNewsData.xcdatamodel; sourceTree = "<group>"; };
 		E77BF00F2A825CBA0032D5D7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E78F689B2A73DD7C00A38393 /* ErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnum.swift; sourceTree = "<group>"; };
 		E78F689E2A74069A00A38393 /* AudioStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStruct.swift; sourceTree = "<group>"; };
@@ -197,9 +207,11 @@
 				E77BF0132A826FDA0032D5D7 /* FirebaseAppCheck in Frameworks */,
 				E77BF0152A826FDA0032D5D7 /* FirebaseAuth in Frameworks */,
 				E73DD4DA2A53E96D0015ED0B /* StorageService.framework in Frameworks */,
+				E7BAF3102A949FBF00B4E60E /* RealmSwift in Frameworks */,
 				E77BF0192A826FDA0032D5D7 /* FirebaseFirestoreSwift in Frameworks */,
 				E75342C22A570441007148F0 /* iOSIntPackage in Frameworks */,
 				E758A25A2A73D7BC00226B39 /* SwiftEntryKit in Frameworks */,
+				E7BAF30E2A949FBF00B4E60E /* Realm in Frameworks */,
 				E77BF0172A826FDA0032D5D7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +248,7 @@
 				E7D77E722A810DE300BD852E /* CheckerService */,
 				E74399D42A559BE100280019 /* Checker Singlton */,
 				E74399D82A559D0400280019 /* Delegate */,
+				E759CBB32AB4379100B3CAB1 /* FavoriteNewsPick */,
 				E7CEB4D52A56D9A5000D5410 /* LoginFactory */,
 				E73DD4D32A53E96D0015ED0B /* StorageService */,
 				BC683E3328C36540002DD0FE /* Products */,
@@ -384,6 +397,17 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		E759CBB32AB4379100B3CAB1 /* FavoriteNewsPick */ = {
+			isa = PBXGroup;
+			children = (
+				E759CBB42AB437CB00B3CAB1 /* FavoriteViewController.swift */,
+				E759CBB82AB4391B00B3CAB1 /* CoreDataManager.swift */,
+				E759CBBA2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodeld */,
+				E759CBB62AB4386C00B3CAB1 /* NewsTableViewCell.swift */,
+			);
+			path = FavoriteNewsPick;
+			sourceTree = "<group>";
+		};
 		E78F689D2A74067F00A38393 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +532,8 @@
 				E77BF0142A826FDA0032D5D7 /* FirebaseAuth */,
 				E77BF0162A826FDA0032D5D7 /* FirebaseFirestore */,
 				E77BF0182A826FDA0032D5D7 /* FirebaseFirestoreSwift */,
+				E7BAF30D2A949FBF00B4E60E /* Realm */,
+				E7BAF30F2A949FBF00B4E60E /* RealmSwift */,
 			);
 			productName = Naigation_HW;
 			productReference = BC683E3228C36540002DD0FE /* Naigation_HW.app */;
@@ -606,6 +632,7 @@
 				E75342C02A570441007148F0 /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
 				E758A2582A73D7BC00226B39 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
 				E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E7BAF30C2A949FBF00B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = BC683E3328C36540002DD0FE /* Products */;
 			projectDirPath = "";
@@ -671,6 +698,7 @@
 				E79D8A352A5C05FE000003DD /* CustomButton.swift in Sources */,
 				E74468E92A76972700C46BBC /* PlanetDateConfig.swift in Sources */,
 				E74399DC2A55BBDF00280019 /* LoginInspector.swift in Sources */,
+				E759CBB72AB4386C00B3CAB1 /* NewsTableViewCell.swift in Sources */,
 				E7B46C6B2A6162890092A709 /* FeedModel.swift in Sources */,
 				BCAAA1812902FE470026605C /* PhotoCollectionViewCell.swift in Sources */,
 				E7188BA82A6BFFFD00CFCB78 /* PostCoordinator.swift in Sources */,
@@ -698,12 +726,15 @@
 				BC683E6628C366D9002DD0FE /* FeedViewController.swift in Sources */,
 				E7D77E712A810CA700BD852E /* UserService.swift in Sources */,
 				BCB07C472901995300C6D752 /* PhotosTableViewCell.swift in Sources */,
+				E759CBBC2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodeld in Sources */,
 				E75342C62A57DEF4007148F0 /* PhotosCollectionFiltre.swift in Sources */,
 				E78F689F2A74069A00A38393 /* AudioStruct.swift in Sources */,
+				E759CBB52AB437CB00B3CAB1 /* FavoriteViewController.swift in Sources */,
 				E78F68AD2A740C9200A38393 /* AudioViewCiontroller.swift in Sources */,
 				BC683E6E28C367C8002DD0FE /* InfoViewController.swift in Sources */,
 				E708F0E62A5325E0009F42CA /* PostHeader.swift in Sources */,
 				E73DD4E72A53EDD70015ED0B /* PostHEaderCollection.swift in Sources */,
+				E759CBB92AB4391B00B3CAB1 /* CoreDataManager.swift in Sources */,
 				BCB07C4929019CC000C6D752 /* PhotosViewController.swift in Sources */,
 				E74468E42A7671CA00C46BBC /* AppConfiguration.swift in Sources */,
 				BCA6373228C9F23400C65D52 /* LogInViewController.swift in Sources */,
@@ -910,9 +941,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Nav2.Naigation-HW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -939,9 +973,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Nav2.Naigation-HW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1168,6 +1205,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		E7BAF30C2A949FBF00B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1201,7 +1246,30 @@
 			package = E77BF0112A826FD90032D5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
+		E7BAF30D2A949FBF00B4E60E /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7BAF30C2A949FBF00B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E7BAF30F2A949FBF00B4E60E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7BAF30C2A949FBF00B4E60E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		E759CBBA2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E759CBBB2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodel */,
+			);
+			currentVersion = E759CBBB2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodel */;
+			path = FavoriteNewsData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BC683E2A28C36540002DD0FE /* Project object */;
 }
