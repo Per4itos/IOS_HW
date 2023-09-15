@@ -11,6 +11,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var appCoordinator: AppCoordinator?
     var window: UIWindow?
+    
+    let logInViewController = UINavigationController(rootViewController: LogInViewController())
+    let favoriteNewsViewController = UINavigationController(rootViewController: FavoriteViewController())
+    let postViewController = UINavigationController(rootViewController: PostViewController())
    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -18,13 +22,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
+        let tabBarControlelr = UITabBarController()
+        
+        
         appCoordinator = AppCoordinator(window: window!)
         appCoordinator?.start()
-        
+
         _ = MyLoginFactoryStruct()
-        let logInViewController = UINavigationController(rootViewController: LogInViewController())
+     
+        tabBarControlelr.viewControllers = [logInViewController, postViewController, favoriteNewsViewController]
+
+        logInViewController.tabBarItem.title = "Profile"
+        postViewController.tabBarItem.title = "Feed"
+                 favoriteNewsViewController.tabBarItem.title = "Favorite News"
+
+        logInViewController.tabBarItem.image = UIImage(systemName: "person.circle")
+        postViewController.tabBarItem.image = UIImage(systemName: "square.fill.text.grid.1x2")
+                 favoriteNewsViewController.tabBarItem.image = UIImage(systemName: "text.badge.star")
         
-        self.window?.rootViewController = logInViewController
+        self.window?.rootViewController = tabBarControlelr
         self.window?.makeKeyAndVisible()
         
         let randomeValueForAPI = AppConfiguration.allCases.randomElement()!

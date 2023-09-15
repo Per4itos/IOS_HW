@@ -10,6 +10,9 @@ import StorageService
 
 public class PostTableViewCell: UITableViewCell {
     
+    let newsCoreData = CoreDataManager.shared
+       var indexPatch: IndexPath!
+    
     private lazy var lImage: UIImageView = {
         
         let imageLikse = UIImageView()
@@ -91,6 +94,10 @@ public class PostTableViewCell: UITableViewCell {
     }
     
     private func setupView() {
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapFunc))
+                        doubleTap.numberOfTapsRequired = 2
+                        self.addGestureRecognizer(doubleTap)
+        
         self.contentView.addSubview(self.lImage)
         self.contentView.addSubview(self.vImage)
         self.contentView.addSubview(self.titleLable)
@@ -130,5 +137,15 @@ public class PostTableViewCell: UITableViewCell {
             self.views.rightAnchor.constraint(equalTo: self.vImage.leftAnchor)
         ])
     }
+    
+    @objc func doubleTapFunc() {
+        newsCoreData.createNews(title: titleLable.text!, image: "image1", text: text.text!, likes: likes.text!, views: views.text!)
+
+                     newsCoreData.reloadNews()
+             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newsUpdate"), object: nil)
+
+         }
+    
+  
 }
 
