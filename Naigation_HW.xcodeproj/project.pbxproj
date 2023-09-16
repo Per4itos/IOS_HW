@@ -402,8 +402,8 @@
 			children = (
 				E759CBB42AB437CB00B3CAB1 /* FavoriteViewController.swift */,
 				E759CBB82AB4391B00B3CAB1 /* CoreDataManager.swift */,
-				E759CBBA2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodeld */,
 				E759CBB62AB4386C00B3CAB1 /* NewsTableViewCell.swift */,
+				E759CBBA2AB43D1E00B3CAB1 /* FavoriteNewsData.xcdatamodeld */,
 			);
 			path = FavoriteNewsPick;
 			sourceTree = "<group>";
